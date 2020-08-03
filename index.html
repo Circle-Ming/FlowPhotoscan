@@ -1,0 +1,737 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>AgroOptics and Imaging Lab</title>
+        <link rel="shortcut icon" href="img/lab.ico">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1"><!--针对移动浏览器的视口标签-->
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/swiper.min.css">
+        <link rel="stylesheet" href="js/leaflet/leaflet.css" />
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?b616d8cf53eebcf608b2577985a27371";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+
+    </head>
+    <body data-spy="scroll" data-target=".navbar">
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <header role="banner">
+            <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="MagicGIS'" width="145"></a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#index-content-banner">
+                                <span class="icon fa fa-home"></span> 主页
+                            </a></li>
+                            <li><a href="#index-content-case">
+                                <span class="icon fa fa-desktop"></span> 项目
+                            </a></li>
+                            <li><a href="#index-content-project">
+                                <span class="icon fa fa-sitemap"></span> 论文
+                            </a></li>
+                            <li><a href="#index-content-share">
+                                <span class="icon fa fa-tasks"></span> Demo
+                            </a></li>
+                            <li><a href="#index-content-contract">
+                                <span class="icon fa fa-envelope"></span> 联系方式
+                            </a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Link <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://github.com/Circle-Ming" target="_blank">
+                                        <span class="fa fa-github"></span>  Github</a></li>
+                                    <li><a href="https://person.zju.edu.cn/chy" target="_blank">
+                                        <span class="fa fa-podcast"></span>  负责人主页</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="sign.html" title="登陆"><i class="icon fa fa-user fa-lg"></i> <span>登陆</span></a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div><!--/.container -->
+            </nav>
+        </header>
+
+        <main role="main">
+            <!--传送带-->
+            <div id="index-content-banner">
+                <div id="homepage-feature" class="carousel slide"  data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#homepage-feature" data-slide-to="0" class="active"></li>
+                        <li data-target="#homepage-feature" data-slide-to="1"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img id="slogan0-img" src="img/carousel/slogan0.jpg">
+                            <video id="slogan0-video" preload="auto" autoplay="autoplay" muted="muted" loop="loop" poster="img/carousel/slogan0.jpg">
+                                <source type="video/mp4" src="img/carousel/slogan0.mp4">
+                            </video>
+                            <a class="carousel-mask"></a>
+                            <div class="swiper-content carousel-caption">
+                                <h1 class="title">The Science of Where</h1>
+                                <h3 class="subtitle">RS的应用只与一个因素有关，就是想象力</h3>
+								<a class="btn btn-primary" href="function.html" target="_blank">无人机RS数据处理平台</a>
+							</div>
+                        </div>
+                        <div class="item">
+                            <img src="img/carousel/slogan1.jpg">
+                            <div id="slogan1" class="swiper-content carousel-caption">
+                                <h1 class="title">无人机RS数据处理平台</h1>
+                                <h1 class="subtitle">专注于遥感数据分析与智能化处理</h1>
+                                <a href="project.html" target="_blank"><button class="btn btn-success">项目展示</button></a>
+                            </div>
+                        </div>
+                    </div><!-- /.carousel-inner -->
+
+                    <a class="left carousel-control" href="#homepage-feature" data-slide="prev">
+                        <span class="icon fa fa-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#homepage-feature" data-slide="next">
+                        <span class="icon fa fa-chevron-right"></span>
+                    </a>
+                </div><!-- /#homepage-feature.carousel -->
+            </div>
+
+            <!--简介-->
+            <div class="threebox">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="threeitemdetail">
+                            <div style="text-align: center; height:62px; width:100%;">
+                                <img src="img/newindex/online.png" style="width:68px;">
+                            </div>
+                            <div class="content1">田地</div>
+                            <div class="content2">将数据呈现于田地之上，不仅仅是可视化，更是探索、挖掘、发现数据的新价值之旅，力求以易理解方式将田地上的信息展现。</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" style="border-left:1px solid #e2e2e2;border-right:1px solid #e2e2e2;">
+                        <div class="threeitemdetail">
+                            <div style="text-align: center; height:62px; width:100%;">
+                                <img src="img/newindex/dataservice.png" style="width:68px;">
+                            </div>
+                            <div class="content1">数据</div>
+                            <div class="content2">上传、维护或分享自己的数据，使用云平台提供的各类公共数据。</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6" style="border-right:1px solid #e2e2e2;">
+                        <div class="threeitemdetail">
+                            <div style="text-align: center; height:62px; width:100%;">
+                                <img src="img/newindex/cloud.png" style="width:68px;">
+                            </div>
+                            <div class="content1">服务</div>
+                            <div class="content2">提供不限于图像格式转化、图像预处理、拼接校准、特征提取和智能化分析等针对无人机遥感数据的相关服务。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="threeitemdetail">
+                            <div style="text-align: center; height:62px; width:100%;">
+                                <img src="img/newindex/API.png" style="width:68px;">
+                            </div>
+                            <div class="content1">应用</div>
+                            <div class="content2">即拿即用的Web应用程序，提供实时数据处理、分析与可视化，最大化结合农业信息专家和遥感专家的意见。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--项目-->
+            <div id="index-content-case">
+                <div class="solutiontext1">
+                    <span>项目 - 分享无人机遥感的价值</span>
+                </div>
+                <ul class="case-content">
+                    <li class="case-item">
+                        <div class="case-img" id="property"></div><!--背景图-->
+                        <div class="mask"><!--覆盖Div-->
+                            <div class="bg other-bg"></div><!--绿色背景-->
+                            <div class="content"><!--覆盖内容-->
+                                <div class="item-img-panel"><!--覆盖图标-->
+                                    <img src="img/newindex/house@2x.png" alt="" class="item-img"><!--正常显示图标-->
+                                    <img src="img/newindex/house@2x.png" alt="" class="item-img-hover"><!--hover显示图标-->
+                                </div>
+                                <h3 class="item-title">无人机遥感数据实时处理</h3><!--覆盖标题-->
+                                <p class="item-desc">提供实时获取无人机遥感数据，并上传云端服务器完成预处理等操作，将所需结果可视化实时展示</p>
+                                <a class="btn btn-primary-o item-link" href="project.html" target="_blank">查看详情</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="case-item">
+                        <div class="case-img" id="retail"></div>
+                        <div class="mask">
+                            <div class="bg other-bg"></div>
+                            <div class="content">
+                                <div class="item-img-panel">
+                                    <img src="img/newindex/sale@2x.png" alt="" class="item-img">
+                                    <img src="img/newindex/sale@2x.png" alt="" class="item-img-hover">
+                                </div>
+                                <h3 class="item-title">RS数字化平台</h3>
+                                <p class="item-desc">处理完遥感数据我们可以获得什么呢？我们可以完成估产、株高标定等功能，极大化降低人力</p>
+                                <a class="btn btn-primary-o item-link" href="project.html" target="_blank">查看详情</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="case-item">
+                        <div class="case-img" id="wisdom-city"></div>
+                        <div class="mask">
+                            <div class="bg other-bg"></div>
+                            <div class="content">
+                                <div class="item-img-panel">
+                                    <img src="img/newindex/smartcity@2x.png" alt="" class="item-img">
+                                    <img src="img/newindex/smartcity@2x.png" alt="" class="item-img-hover">
+                                </div>
+                                <h3 class="item-title">智慧RS论坛</h3>
+                                <p class="item-desc">XXXXXXXXXXXXXX</p>
+                                <a class="btn btn-primary-o item-link" href="http://www.jors.cn/jrs/ch/reader/view_news.aspx?id=20191217112520001" target="_blank">查看详情</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+
+            <!--GIS实例-->
+            <section id="project">
+                <div class="project-info">
+                    <h1>遥感数据处理实例</h1>
+                    <h3>Photogrammetric processing of digital</h3>
+                    <h3> images and 3D spatial data generation</h3>
+                    <a href="https://www.agisoft.com/" target="_blank">
+                        <button class="view-more">点击进入</button>
+                    </a>
+                </div>
+            </section>
+
+            <!--作品区-->
+            <div id="index-content-project">
+                <div class="solutiontext1">
+                    <span>Publication - 无处不在，随处精彩</span>
+                </div>
+                <!--作品图标-->
+                <div class="Process col-xs-12">
+                    <ul>
+                        <li>
+                            <div>
+                                <i class="fa fa-history"></i><br>
+                                <b>Research</b>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <i class="fa fa-puzzle-piece"></i><br>
+                                <b>Plan</b>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <i class="fa fa-database"></i><br>
+                                <b>Develop</b>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <i class="fa fa-magic"></i><br>
+                                <b>Integration</b>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+                <div class="row">
+                    <figure class="col-sm-4">
+                        <img src="img/figure/1.jpg">
+                        <figcaption>
+                            <h3>A</h3>
+                            <p>Nutrient status diagnosis of infield oilseed rape via deep learning-enabled dynamic model.
+                                <br>
+                                <a href="https://person.zju.edu.cn/chy" target="_blank"> 更多细节</a>
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure class="col-sm-4">
+                        <img src="img/figure/2.jpg">
+                        <figcaption>
+                            <h3>B</h3>
+                            <p>Technology progress in mechanical harvest of fresh market apples.
+                                <br>
+                                <a href="https://person.zju.edu.cn/chy" target="_blank"> 更多细节</a>
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure class="col-sm-4">
+                        <img src="img/figure/3.jpg">
+                        <figcaption>
+                            <h3>C</h3>
+                            <p>Grain yield prediction of rice using multi-temporal UAV-based RGB and multispectral images and model transfer – a case study of small farmlands in the South of China.
+                                <br>
+                                <a href="https://person.zju.edu.cn/chy" target="_blank"> 更多细节</a>
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure class="col-sm-4">
+                        <img src="img/figure/4.jpg">
+                        <figcaption>
+                            <h3>D</h3>
+                            <p>深度学习在植物表型研究中的应用现状与展望
+                                <br>
+                                <a href=https://person.zju.edu.cn/chy" target="_blank"> 更多细节</a>
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure class="col-sm-4">
+                        <img src="img/figure/5.jpg">
+                        <figcaption>
+                            <h3>E</h3>
+                            <p>Characterization and detection of leaf photosynthesis response to citrus Huanglongbing from cool to hot seasons in two orchards.
+                                <br>
+                                <a href="https://person.zju.edu.cn/chy" target="_blank"> 更多细节</a>
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <figure class="col-sm-4">
+                        <img src="img/figure/6.jpg">
+                        <figcaption>
+                            <h3>F</h3>
+                            <p>Assessment of seed yield and quality of winter oilseed rape using chlorophyll fluorescence parameters of pods.
+                                <br>
+                                <a href="https://person.zju.edu.cn/chy" target="_blank"> 更多细节</a>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <!--Demo区-->
+            <div id="index-content-share" class="index-content">
+                <div class="solutiontext1">
+                    <span>Demo - 因为专注所以精彩</span>
+                </div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <ul class="maplist">
+                                <li class="map">
+                                    <div class="map_wrap">
+                                        <a class="map_bg" target="_blank"
+                                           href="#"  data-toggle="modal" data-target="#myModal"
+                                           style="background-image: url(img/figure/Q1.png);">
+                                            <div class="map_hover">
+                                                <div class="map_magnifier"><img src="img/figure/magnifier.png">
+                                                </div>
+                                                <span>点击查看</span></div>
+                                        </a>
+                                        <div class="map_info">
+                                            <div class="map_name">农田遥感数据图</div>
+                                            <div class="map_detail">
+                                                <div class="pull-left"><span
+                                                        class="icon fa fa-user-circle fa-lg"></span><span
+                                                        class="map_icontxt">whm</span></div>
+                                                <div class="map_time pull-right"><span
+                                                        class="icon fa fa-clock-o fa-lg"></span><span
+                                                        class="map_icontxt">2020.08.03</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="map">
+                                    <div class="map_wrap">
+                                        <a class="map_bg" target="_blank"
+                                           href="#"  data-toggle="modal" data-target="#myModal"
+                                           style="background-image: url(img/figure/Q1.png);">
+                                            <div class="map_hover">
+                                                <div class="map_magnifier"><img src="img/figure/magnifier.png">
+                                                </div>
+                                                <span>点击查看</span></div>
+                                        </a>
+                                        <div class="map_info">
+                                            <div class="map_name">农田遥感数据图</div>
+                                            <div class="map_detail">
+                                                <div class="pull-left"><span
+                                                        class="icon fa fa-user-circle fa-lg"></span><span
+                                                        class="map_icontxt">whm</span></div>
+                                                <div class="map_time pull-right"><span
+                                                        class="icon fa fa-clock-o fa-lg"></span><span
+                                                        class="map_icontxt">2020.08.03</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="map">
+                                    <div class="map_wrap">
+                                        <a class="map_bg" target="_blank"
+                                           href="#"  data-toggle="modal" data-target="#myModal"
+                                           style="background-image: url(img/figure/Q1.png);">
+                                            <div class="map_hover">
+                                                <div class="map_magnifier"><img src="img/figure/magnifier.png">
+                                                </div>
+                                                <span>点击查看</span></div>
+                                        </a>
+                                        <div class="map_info">
+                                            <div class="map_name">农田遥感数据图</div>
+                                            <div class="map_detail">
+                                                <div class="pull-left"><span
+                                                        class="icon fa fa-user-circle fa-lg"></span><span
+                                                        class="map_icontxt">whm</span></div>
+                                                <div class="map_time pull-right"><span
+                                                        class="icon fa fa-clock-o fa-lg"></span><span
+                                                        class="map_icontxt">2020.08.03</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="map">
+                                    <div class="map_wrap">
+                                        <a class="map_bg" target="_blank"
+                                           href="#"  data-toggle="modal" data-target="#myModal"
+                                           style="background-image: url(img/figure/Q1.png);">
+                                            <div class="map_hover">
+                                                <div class="map_magnifier"><img src="img/figure/magnifier.png">
+                                                </div>
+                                                <span>点击查看</span></div>
+                                        </a>
+                                        <div class="map_info">
+                                            <div class="map_name">农田遥感数据图</div>
+                                            <div class="map_detail">
+                                                <div class="pull-left"><span
+                                                        class="icon fa fa-user-circle fa-lg"></span><span
+                                                        class="map_icontxt">whm</span></div>
+                                                <div class="map_time pull-right"><span
+                                                        class="icon fa fa-clock-o fa-lg"></span><span
+                                                        class="map_icontxt">2020.08.03</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="map">
+                                    <div class="map_wrap">
+                                        <a class="map_bg" target="_blank"
+                                           href="#"  data-toggle="modal" data-target="#myModal"
+                                           style="background-image: url(img/figure/Q1.png);">
+                                            <div class="map_hover">
+                                                <div class="map_magnifier"><img src="img/figure/magnifier.png">
+                                                </div>
+                                                <span>点击查看</span></div>
+                                        </a>
+                                        <div class="map_info">
+                                            <div class="map_name">农田遥感数据图</div>
+                                            <div class="map_detail">
+                                                <div class="pull-left"><span
+                                                        class="icon fa fa-user-circle fa-lg"></span><span
+                                                        class="map_icontxt">whm</span></div>
+                                                <div class="map_time pull-right"><span
+                                                        class="icon fa fa-clock-o fa-lg"></span><span
+                                                        class="map_icontxt">2020.08.03</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="map">
+                                    <div class="map_wrap">
+                                        <a class="map_bg" target="_blank"
+                                           href="#"  data-toggle="modal" data-target="#myModal"
+                                           style="background-image: url(img/figure/Q1.png);">
+                                            <div class="map_hover">
+                                                <div class="map_magnifier"><img src="img/figure/magnifier.png">
+                                                </div>
+                                                <span>点击查看</span></div>
+                                        </a>
+                                        <div class="map_info">
+                                            <div class="map_name">农田遥感数据图</div>
+                                            <div class="map_detail">
+                                                <div class="pull-left"><span
+                                                        class="icon fa fa-user-circle fa-lg"></span><span
+                                                        class="map_icontxt">whm</span></div>
+                                                <div class="map_time pull-right"><span
+                                                        class="icon fa fa-clock-o fa-lg"></span><span
+                                                        class="map_icontxt">2020.08.03</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <ul class="maplist">
+                                <li class="map">
+                                    <div class="map_wrap">
+                                        <a class="map_bg" target="_blank"
+                                           href="#"  data-toggle="modal" data-target="#myModal"
+                                           style="background-image: url(img/figure/Q2.png);">
+                                            <div class="map_hover">
+                                                <div class="map_magnifier"><img src="img/figure/magnifier.png">
+                                                </div>
+                                                <span>点击查看</span></div>
+                                        </a>
+                                        <div class="map_info">
+                                            <div class="map_name">农田遥感数据图</div>
+                                            <div class="map_detail">
+                                                <div class="pull-left"><span
+                                                        class="icon fa fa-user-circle fa-lg"></span><span
+                                                        class="map_icontxt">whm</span></div>
+                                                <div class="map_time pull-right"><span
+                                                        class="icon fa fa-clock-o fa-lg"></span><span
+                                                        class="map_icontxt">2020.08.03</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="map">
+                                    <div class="map_wrap">
+                                        <a class="map_bg" target="_blank"
+                                           href="#"  data-toggle="modal" data-target="#myModal"
+                                           style="background-image: url(img/figure/Q2.png);">
+                                            <div class="map_hover">
+                                                <div class="map_magnifier"><img src="img/figure/magnifier.png">
+                                                </div>
+                                                <span>点击查看</span></div>
+                                        </a>
+                                        <div class="map_info">
+                                            <div class="map_name">农田遥感数据图</div>
+                                            <div class="map_detail">
+                                                <div class="pull-left"><span
+                                                        class="icon fa fa-user-circle fa-lg"></span><span
+                                                        class="map_icontxt">whm</span></div>
+                                                <div class="map_time pull-right"><span
+                                                        class="icon fa fa-clock-o fa-lg"></span><span
+                                                        class="map_icontxt">2020.08.03</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="map">
+                                    <div class="map_wrap">
+                                        <a class="map_bg" target="_blank"
+                                           href="#"  data-toggle="modal" data-target="#myModal"
+                                           style="background-image: url(img/figure/Q2.png);">
+                                            <div class="map_hover">
+                                                <div class="map_magnifier"><img src="img/figure/magnifier.png">
+                                                </div>
+                                                <span>点击查看</span></div>
+                                        </a>
+                                        <div class="map_info">
+                                            <div class="map_name">农田遥感数据图</div>
+                                            <div class="map_detail">
+                                                <div class="pull-left"><span
+                                                        class="icon fa fa-user-circle fa-lg"></span><span
+                                                        class="map_icontxt">whm</span></div>
+                                                <div class="map_time pull-right"><span
+                                                        class="icon fa fa-clock-o fa-lg"></span><span
+                                                        class="map_icontxt">2020.08.03</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="map">
+                                    <div class="map_wrap">
+                                        <a class="map_bg" target="_blank"
+                                           href="#"  data-toggle="modal" data-target="#myModal"
+                                           style="background-image: url(img/figure/Q2.png);">
+                                            <div class="map_hover">
+                                                <div class="map_magnifier"><img src="img/figure/magnifier.png">
+                                                </div>
+                                                <span>点击查看</span></div>
+                                        </a>
+                                        <div class="map_info">
+                                            <div class="map_name">农田遥感数据图</div>
+                                            <div class="map_detail">
+                                                <div class="pull-left"><span
+                                                        class="icon fa fa-user-circle fa-lg"></span><span
+                                                        class="map_icontxt">whm</span></div>
+                                                <div class="map_time pull-right"><span
+                                                        class="icon fa fa-clock-o fa-lg"></span><span
+                                                        class="map_icontxt">2020.08.03</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="map">
+                                    <div class="map_wrap">
+                                        <a class="map_bg" target="_blank"
+                                           href="#"  data-toggle="modal" data-target="#myModal"
+                                           style="background-image: url(img/figure/Q2.png);">
+                                            <div class="map_hover">
+                                                <div class="map_magnifier"><img src="img/figure/magnifier.png">
+                                                </div>
+                                                <span>点击查看</span></div>
+                                        </a>
+                                        <div class="map_info">
+                                            <div class="map_name">农田遥感数据图</div>
+                                            <div class="map_detail">
+                                                <div class="pull-left"><span
+                                                        class="icon fa fa-user-circle fa-lg"></span><span
+                                                        class="map_icontxt">whm</span></div>
+                                                <div class="map_time pull-right"><span
+                                                        class="icon fa fa-clock-o fa-lg"></span><span
+                                                        class="map_icontxt">2020.08.03</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="map">
+                                    <div class="map_wrap">
+                                        <a class="map_bg" target="_blank"
+                                           href="#"  data-toggle="modal" data-target="#myModal"
+                                           style="background-image: url(img/figure/Q2.png);">
+                                            <div class="map_hover">
+                                                <div class="map_magnifier"><img src="img/figure/magnifier.png">
+                                                </div>
+                                                <span>点击查看</span></div>
+                                        </a>
+                                        <div class="map_info">
+                                            <div class="map_name">农田遥感数据图</div>
+                                            <div class="map_detail">
+                                                <div class="pull-left"><span
+                                                        class="icon fa fa-user-circle fa-lg"></span><span
+                                                        class="map_icontxt">whm</span></div>
+                                                <div class="map_time pull-right"><span
+                                                        class="icon fa fa-clock-o fa-lg"></span><span
+                                                        class="map_icontxt">2020.08.03</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <!--联系方式-->
+            <div id="index-content-contract">
+                <div id="allmap"></div>
+                <div class="connect-us">
+                    <div class="col-md-9">
+                        <div class="connect-us-box">
+                            <div class="connect-a col-md-3 col-sm-6">联系方式</div>
+                            <div class="connect-a col-md-3 col-sm-6">电话: 123456</div>
+                            <div class="connect-a col-md-3 col-sm-6">邮箱: www@zju.edu.cn</div>
+                            <div class="connect-a col-md-3 col-sm-6">Github：<a style="color: white" target="_blank" href="https://github.com/Circle-Ming">@Circle-Ming</a></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div><img style="margin:3px; width:75px;" class="" src="img/newindex/wechatQR.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer role="contentinfo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-md-2">
+                        <h3>项目作品</h3>
+                        <ul>
+                            <li><a href="#" target="_blank">RS1</a></li>
+                            <li><a href="#" target="_blank">RS2</a></li>
+                            <li><a href="#" target="_blank">RS3</a></li>
+                            <li><a href="#" target="_blank">RS4</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-2">
+                        <h3>Demo</h3>
+                        <ul>
+                            <li><a href="#" data-toggle="modal" data-target="#myModal">跳动的字母君</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#myModal">跳动的字母</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#myModal">跳动的字</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-2">
+                        <h3>其他</h3>
+                        <ul>
+                            <li><a href="https://github.com/Circle-Ming" target="_blank">我的Github</a></li>
+                            <li><a href="https://circle-ming.github.io/" target="_blank">我的个人主页</a></li>
+                            <li><a href="project.html" target="_blank">项目展示</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Add the extrafix for only the required viewport -->
+                    <div class="clearfix visible-sm"></div>
+                    <div class="about col-sm-12 col-md-6">
+                        <h3>关于</h3>
+                        <p>Hey！</p>
+                    </div>
+                </div><!-- /.row -->
+
+                <ul class="social">
+                    <li><a  title="微博"><span class="icon fa fa-weibo"></span></a></li>
+                    <li><a  title="微信"><span class="icon fa fa-weixin"></span></a></li>
+                    <li><a href="https://github.com/Circle-Ming" target="_blank" title="Github"><span class="icon fa fa-github"></span></a></li>
+                    <li>
+                        <a class="fa-stack" title="知乎" target="_blank" href="http://zhihu.com/">
+                            <i class="fa  fa-stack-1x">知</i>
+                        </a>
+                    </li>
+                </ul>
+
+                <p class="footer-brand"><a href="index.html"><img src="img/logo1.png" width="140" alt="Bootstrappin'"></a></p>
+				<p class="text-center">网站备案：</p>
+            </div><!-- /.container -->
+        </footer>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        小拳拳锤你胸口，(｡•ˇ‸ˇ•｡)哼！不给你看。(=ﾟωﾟ)ﾉ
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/swiper.min.js"></script>
+        <script src="js/leaflet/leaflet.js"></script>
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=oMvdENGYZmsGBZlo8MFffrQb"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>

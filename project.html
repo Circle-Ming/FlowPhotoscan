@@ -1,0 +1,209 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>AgroOptics and Imaging Lab</title>
+        <link rel="shortcut icon" href="img/lab.ico">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1"><!--针对移动浏览器的视口标签-->
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/project.css">
+        <link rel="stylesheet" href="css/swiper.min.css">
+        <link rel="stylesheet" href="js/leaflet/leaflet.css" />
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "https://hm.baidu.com/hm.js?b616d8cf53eebcf608b2577985a27371";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+
+    </head>
+    <body data-spy="scroll" style="margin-top: -50px;">
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+        <main role="main">
+            <div class="industry-banner">
+                <div class="titles">
+                    <div class="title">项目展示</div>
+                    <div class="sub-title">提供最专业的行业解决方案</div>
+                </div>
+            </div>
+
+            <div class="industry-body">
+                <div class="industry-content" id="pipelinegis">
+                    <div class="case-wrapper">
+                        <div class="case-text">
+                            <div class="title"><img src="img/project/case2.png" class="case-icon">多光谱相机图像校正模块
+                            </div>
+                            <div class="desc">使用系列号31573050多光谱相机获取多光谱图像，以年月日-架次命名，文件格式为*.raw。连接系列号31573050多光谱相机，打开MSI-IMEC软件，file-open RAW，导入图像，选择setting-calibration，选择校正文件CMV2K-SSM5x5-600_1000-5.5.18.6-NEW，点击by peak，点击converter，使集合图像在当前文件下分成单张图像。</div>
+                            <ol class="feature">
+                                <li>
+                                    <div class="icon"><i class="fa fa-check"></i></div>
+                                    <div class="text">将一个架次的所有tif图像导入Agisoft photoscan。点击工作流程，依次点击对齐照片-生成网格-build orthomosaic，生成正射影图，完成拼图。若不需要拼图，跳过此步骤。</div>
+                                </li>
+                                <li>
+                                    <div class="icon"><i class="fa fa-check"></i></div>
+                                    <div class="text">根据相机镜头前采取滤光片波段范围选择对应修正系数进行光谱校正，例：若采用600-875nm，则使用校正文件CMV2K-SSM5x5-600_1000-5.5.18.6-NEW.xml，提取600-875nm修正系数，在MATLAB首先利用校正板进行辐射校正，然后利用修正系数进行光谱校正，最终得到正确的反射率曲线。注：辐射校正和光谱校正顺序不可变，这是因为原厂给出修正系数的使用方法。滤光片675-975nm同理。</div>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="case-image" index="pipelinegis">
+                            <div class="browser">
+                                <div class="browser-detail">
+                                </div>
+                                <div class="browser-show" index="pipelinegis">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show-all-btn">
+                            <a class="toggle" index="pipelinegis">
+                                <i class="toggle-inner"></i>
+                            </a>
+                            查看全图
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="industry-content inverse" id="pipeline">
+                    <div class="case-wrapper">
+                        <div class="case-text">
+                            <div class="title"><img src="img/project/case1.png" class="case-icon">多光谱相机图像校正模块</div>
+                            <div class="desc">使用系列号31573050多光谱相机获取多光谱图像，以年月日-架次命名，文件格式为*.raw。连接系列号31573050多光谱相机，打开MSI-IMEC软件，file-open RAW，导入图像，选择setting-calibration，选择校正文件CMV2K-SSM5x5-600_1000-5.5.18.6-NEW，点击by peak，点击converter，使集合图像在当前文件下分成单张图像。</div>
+                            <ol class="feature">
+                                <li>
+                                    <div class="icon"><i class="fa fa-check"></i></div>
+                                    <div class="text">将一个架次的所有tif图像导入Agisoft photoscan。点击工作流程，依次点击对齐照片-生成网格-build orthomosaic，生成正射影图，完成拼图。若不需要拼图，跳过此步骤。</div>
+                                </li>
+                                <li>
+                                    <div class="icon"><i class="fa fa-check"></i></div>
+                                    <div class="text">根据相机镜头前采取滤光片波段范围选择对应修正系数进行光谱校正，例：若采用600-875nm，则使用校正文件CMV2K-SSM5x5-600_1000-5.5.18.6-NEW.xml，提取600-875nm修正系数，在MATLAB首先利用校正板进行辐射校正，然后利用修正系数进行光谱校正，最终得到正确的反射率曲线。注：辐射校正和光谱校正顺序不可变，这是因为原厂给出修正系数的使用方法。滤光片675-975nm同理。</div>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="case-image" index="pipeline">
+                            <div class="browser">
+                                <div class="browser-detail">
+                                </div>
+                                <div class="browser-show" index="pipeline">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show-all-btn">
+                            <a class="toggle" index="pipeline">
+                                <i class="toggle-inner"></i>
+                            </a>
+                            查看全图
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+
+        <footer role="contentinfo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4 col-md-2">
+                        <h3>项目作品</h3>
+                        <ul>
+                            <li><a href="#" target="_blank">RS1</a></li>
+                            <li><a href="#" target="_blank">RS2</a></li>
+                            <li><a href="#" target="_blank">RS3</a></li>
+                            <li><a href="#" target="_blank">RS4</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-2">
+                        <h3>Demo</h3>
+                        <ul>
+                            <li><a href="#" data-toggle="modal" data-target="#myModal">跳动的字母君</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#myModal">跳动的字母</a></li>
+                            <li><a href="#" data-toggle="modal" data-target="#myModal">跳动的字</a></li>                            
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-2">
+                        <h3>其他</h3>
+                        <ul>
+                            <li><a href="https://github.com/Circle-Ming" target="_blank">我的Github</a></li>
+                            <li><a href="https://circle-ming.github.io/" target="_blank">我的个人主页</a></li>
+                            <li><a href="project.html" target="_blank">项目展示</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Add the extrafix for only the required viewport -->
+                    <div class="clearfix visible-sm"></div>
+                    <div class="about col-sm-12 col-md-6">
+                        <h3>关于</h3>
+                        <p>Hey！</p>
+                    </div>
+                </div><!-- /.row -->
+
+                <ul class="social">
+                    <li><a  title="微博"><span class="icon fa fa-weibo"></span></a></li>
+                    <li><a  title="微信"><span class="icon fa fa-weixin"></span></a></li>
+                    <li><a href="https://github.com/Circle-Ming" target="_blank" title="Github"><span class="icon fa fa-github"></span></a></li>
+                    <li>
+                        <a class="fa-stack" title="知乎" target="_blank" href="http://zhihu.com/">
+                            <i class="fa  fa-stack-1x">知</i>
+                        </a>
+                    </li>
+                </ul>
+
+                <p class="footer-brand"><a href="index.html"><img src="img/logo1.png" width="140" alt="Bootstrappin'"></a></p>
+				<p class="text-center">网站备案：</p>
+            </div><!-- /.container -->
+        </footer>
+
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/swiper.min.js"></script>
+        <script src="js/leaflet/leaflet.js"></script>
+        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=oMvdENGYZmsGBZlo8MFffrQb"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script>
+            $(".toggle").bind("click", function() {
+                var a = $(this).attr("index");
+                var s = $(".case-image[index=" + a + "]");
+                if ($(this).hasClass("active")) {
+                    $(this).removeClass("active");
+                    s.removeClass("active")
+                } else {
+                    $(this).addClass("active");
+                    s.addClass("active")
+                }
+            });
+            $(".case-image").bind("click", function() {
+                var a = $(this).attr("index");
+                var s = $(".toggle[index=" + a + "]");
+                if (s.hasClass("active")) {
+                    s.removeClass("active");
+                    $(this).removeClass("active")
+                } else {
+                    s.addClass("active");
+                    $(this).addClass("active")
+                }
+            });
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
