@@ -1,52 +1,56 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>AgroOptics and Imaging Lab</title>
-        <link rel="shortcut icon" href="img/lab.ico">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1"><!--针对移动浏览器的视口标签-->
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>AgroOptics and Imaging Lab</title>
+    <link rel="shortcut icon" href="img/lab.ico">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--针对移动浏览器的视口标签-->
 
-        <link rel="stylesheet" href="css/function.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/swiper.min.css">
-        <link rel="stylesheet" href="js/leaflet/leaflet.css" />
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-		<script>
-			var _hmt = _hmt || [];
-			(function() {
-			  var hm = document.createElement("script");
-			  hm.src = "https://hm.baidu.com/hm.js?b616d8cf53eebcf608b2577985a27371";
-			  var s = document.getElementsByTagName("script")[0]; 
-			  s.parentNode.insertBefore(hm, s);
-			})();
-		</script>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/function.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/bootstrap-treeview.min.css">
+    <link rel="stylesheet" href="js/leaflet/leaflet.css" />
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?b616d8cf53eebcf608b2577985a27371";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 
-    </head>
-    <body data-spy="scroll" data-target=".navbar">
-        <!--[if lte IE 9]>
+</head>
+
+<body data-spy="scroll" data-target=".navbar">
+    <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <header role="banner">
-            <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" ><img src="img/logo.png" alt="MagicGIS'" width="145"></a>
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <!-- <li class="active"><a href="#index-content-banner">
+    <!-- Add your site or application content here -->
+    <header role="banner">
+        <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand"><img src="img/logo.png" alt="MagicGIS'" width="145"></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- <li class="active"><a href="#index-content-banner">
                                 <span class="icon fa fa-home"></span> 主页
                             </a></li>
                             <li><a href="#index-content-case">
@@ -61,217 +65,306 @@
                             <li><a href="#index-content-contract">
                                 <span class="icon fa fa-envelope"></span> 联系方式
                             </a></li> -->
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> File <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a target="_blank">New File</a></li>
-                                    <li><a target="_blank">Open File...</a></li>
-                                    <li><a target="_blank">Open Folder...</a></li>
-                                    <li><a target="_blank">Save</a></li>
-                                    <li><a target="_blank">Save As...</a></li>
-                                    <li><a href="index.html" target="_blank">Exit</a></li>
-                                    
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Edit <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a target="_blank">Undo</a></li>
-                                    <li><a target="_blank">Redo</a></li>
-                                    <li><a target="_blank">Cut</a></li>
-                                    <li><a target="_blank">Copy</a></li>
-                                    <li><a target="_blank">Paste</a></li>                                    
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> View <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a target="_blank">Zoom in</a></li>
-                                    <li><a target="_blank">Zoom out</a></li>
-                                    <li><a target="_blank">50%</a></li>
-                                    <li><a target="_blank">75%</a></li>
-                                    <li><a target="_blank">100%</a></li>                                    
-                                    <li><a target="_blank">150%</a></li>                                    
-                                    <li><a target="_blank">200%</a></li>    
-                                    <li><a target="_blank">Reset</a></li>    
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Help <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a target="_blank">Function</a></li>
-                                    <li><a target="_blank">Feedback</a></li>                                    
-                                </ul>
-                            </li>
-                            
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Link <b class="caret"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="https://github.com/Circle-Ming" target="_blank">
-                                        <span class="fa fa-github"></span>  Github</a></li>
-                                    <li><a href="https://person.zju.edu.cn/chy" target="_blank">
-                                        <span class="fa fa-podcast"></span>  负责人主页</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        
-                    </div><!--/.nav-collapse -->
-                </div><!--/.container -->
-            </nav>
-        </header>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> File <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a target="_blank">New File</a></li>
+                                <li><a target="_blank">Open File...</a></li>
+                                <li><a target="_blank">Open Folder...</a></li>
+                                <li><a target="_blank">Save</a></li>
+                                <li><a target="_blank">Save As...</a></li>
+                                <li><a href="index.html" target="_blank">Exit</a></li>
 
-        <main role="main">
-            <div class="toolbox">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="threeitemdetail">
-                            <div style="text-align: center; height:0px; width:150px;">
-                                <img src="img/function/1.png" style="width:17px;">
-                            </div>
-                            <div style="text-align: right; height:0px; width:250px;">
-                                <img src="img/function/2.png" style="width:17px;">
-                            </div>
-                            
-                            <!-- <div class="content1">田地</div>
-                            <div class="content2">将数据呈现于田地之上，不仅仅是可视化，更是探索、挖掘、发现数据的新价值之旅，力求以易理解方式将田地上的信息展现。</div> -->
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Edit <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a target="_blank">Undo</a></li>
+                                <li><a target="_blank">Redo</a></li>
+                                <li><a target="_blank">Cut</a></li>
+                                <li><a target="_blank">Copy</a></li>
+                                <li><a target="_blank">Paste</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> View <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a target="_blank">Zoom in</a></li>
+                                <li><a target="_blank">Zoom out</a></li>
+                                <li><a target="_blank">50%</a></li>
+                                <li><a target="_blank">75%</a></li>
+                                <li><a target="_blank">100%</a></li>
+                                <li><a target="_blank">150%</a></li>
+                                <li><a target="_blank">200%</a></li>
+                                <li><a target="_blank">Reset</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Help <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a target="_blank">Function</a></li>
+                                <li><a target="_blank">Feedback</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Link <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://github.com/Circle-Ming" target="_blank">
+                                        <span class="fa fa-github"></span> Github</a></li>
+                                <li><a href="https://person.zju.edu.cn/chy" target="_blank">
+                                        <span class="fa fa-podcast"></span> 负责人主页</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+            <!--/.container -->
+        </nav>
+    </header>
+
+    <main role="main">
+        <div class="toolbox">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="threeitemdetail">
+                        <div style="text-align: center; height:0px; width:150px;">
+                            <img src="img/function/1.png" style="width:17px;">
                         </div>
-                        
+                        <div style="text-align: right; height:0px; width:250px;">
+                            <img src="img/function/2.png" style="width:17px;">
+                        </div>
+
+                        <!-- <div class="content1">田地</div>
+                            <div class="content2">将数据呈现于田地之上，不仅仅是可视化，更是探索、挖掘、发现数据的新价值之旅，力求以易理解方式将田地上的信息展现。</div> -->
                     </div>
-                    <div class="col-md-3 col-sm-6" style="border-left:1px solid #e2e2e2; border-right:1px solid #e2e2e2;">
-                        <div class="threeitemdetail">
-                            <div style="text-align: center; height:0px; width:100px;">
-                                <img src="img/function/3.png" style="width:17px;">
-                            </div>
-                            <div class="content1" style="text-align: right; height: 0px; width: 220px;">缩放比例100%</div>
-                            <div style="text-align: right; height:0px; width:300px;">
-                                <img src="img/function/4.png" style="width:17px;">
-                            </div>
-                            <!-- <div class="content1">数据</div>
+
+                </div>
+                <div class="col-md-3 col-sm-6" style="border-left:1px solid #e2e2e2; border-right:1px solid #e2e2e2;">
+                    <div class="threeitemdetail">
+                        <div style="text-align: center; height:0px; width:100px;">
+                            <img src="img/function/3.png" style="width:17px;">
+                        </div>
+                        <div class="content1" style="text-align: right; height: 0px; width: 220px;">缩放比例100%</div>
+                        <div style="text-align: right; height:0px; width:300px;">
+                            <img src="img/function/4.png" style="width:17px;">
+                        </div>
+                        <!-- <div class="content1">数据</div>
                             <div class="content2">上传、维护或分享自己的数据，使用云平台提供的各类公共数据。</div> -->
-                        </div>
-                    </div>
-                   
-                    
-                    <div class="col-md-3 col-sm-6" style="border-right:1px ssolid #e2e2e2;">
-                        <div class="threeitemdetail">
-                            <div style="text-align: center; height:0px; width:100px;">
-                                <img src="img/function/5.png" style="width:15px;">
-                            </div>
-                            <div style="text-align: right; height:0px; width:175px;">
-                                <img src="img/function/6.png" style="width:20px;">
-                            </div>
-                            <div style="text-align: right; height:0px; width:300px;">
-                                <img src="img/function/7.png" style="width:20px;">
-                            </div>
-                            <!-- <div class="content1">应用</div>
-                            <div class="content2">即拿即用的Web应用程序，提供实时数据处理、分析与可视化，最大化结合农业信息专家和遥感专家的意见。 -->
-                            
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6" style="border-left:1px solid #e2e2e2;">
-                        <div class="threeitemdetail">
-                            <div style="text-align: center; height:0px; width:350px;">
-                                <img src="img/function/8.png" style="width:20px;">
-                            </div>
-                            
-                            <!-- <div class="content1">田地</div>
-                            <div class="content2">将数据呈现于田地之上，不仅仅是可视化，更是探索、挖掘、发现数据的新价值之旅，力求以易理解方式将田地上的信息展现。</div> -->
-                        </div>
                     </div>
                 </div>
-            </div>
 
 
+                <div class="col-md-3 col-sm-6" style="border-right:1px ssolid #e2e2e2;">
+                    <div class="threeitemdetail">
+                        <div style="text-align: center; height:0px; width:100px;">
+                            <img src="img/function/5.png" style="width:15px;">
+                        </div>
+                        <div style="text-align: right; height:0px; width:175px;">
+                            <img src="img/function/6.png" style="width:20px;">
+                        </div>
+                        <div style="text-align: right; height:0px; width:300px;">
+                            <img src="img/function/7.png" style="width:20px;">
+                        </div>
+                        <!-- <div class="content1">应用</div>
+                            <div class="content2">即拿即用的Web应用程序，提供实时数据处理、分析与可视化，最大化结合农业信息专家和遥感专家的意见。 -->
 
-
-
-
-            
-        </main>
-
-        <footer role="contentinfo">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4 col-md-2">
-                        <h3>项目作品</h3>
-                        <ul>
-                            <li><a href="#" target="_blank">RS1</a></li>
-                            <li><a href="#" target="_blank">RS2</a></li>
-                            <li><a href="#" target="_blank">RS3</a></li>
-                            <li><a href="#" target="_blank">RS4</a></li>
-                        </ul>
                     </div>
-                    <div class="col-sm-4 col-md-2">
-                        <h3>Demo</h3>
-                        <ul>
-                            <li><a href="#" data-toggle="modal" data-target="#myModal">跳动的字母君</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#myModal">跳动的字母</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#myModal">跳动的字</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4 col-md-2">
-                        <h3>其他</h3>
-                        <ul>
-                            <li><a href="https://github.com/Circle-Ming" target="_blank">我的Github</a></li>
-                            <li><a href="https://circle-ming.github.io/" target="_blank">我的个人主页</a></li>
-                            <li><a href="project.html" target="_blank">项目展示</a></li>
-                        </ul>
-                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6" style="border-left:1px solid #e2e2e2;">
+                    <div class="threeitemdetail">
+                        <div style="text-align: center; height:0px; width:350px;">
+                            <img src="img/function/8.png" style="width:20px;">
+                        </div>
 
-                    <!-- Add the extrafix for only the required viewport -->
-                    <div class="clearfix visible-sm"></div>
-                    <div class="about col-sm-12 col-md-6">
-                        <h3>关于</h3>
-                        <p>Hey！</p>
-                    </div>
-                </div><!-- /.row -->
-
-                <ul class="social">
-                    <li><a  title="微博"><span class="icon fa fa-weibo"></span></a></li>
-                    <li><a  title="微信"><span class="icon fa fa-weixin"></span></a></li>
-                    <li><a href="https://github.com/Circle-Ming" target="_blank" title="Github"><span class="icon fa fa-github"></span></a></li>
-                    <li>
-                        <a class="fa-stack" title="知乎" target="_blank" href="http://zhihu.com/">
-                            <i class="fa  fa-stack-1x">知</i>
-                        </a>
-                    </li>
-                </ul>
-
-                <p class="footer-brand"><a><img src="img/logo1.png" width="140" alt="Bootstrappin'"></a></p>
-				<p class="text-center">网站备案：</p>
-            </div><!-- /.container -->
-        </footer>
-
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
-                    </div>
-                    <div class="modal-body">
-                        小拳拳锤你胸口，(｡•ˇ‸ˇ•｡)哼！不给你看。(=ﾟωﾟ)ﾉ
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <!-- <div class="content1">田地</div>
+                            <div class="content2">将数据呈现于田地之上，不仅仅是可视化，更是探索、挖掘、发现数据的新价值之旅，力求以易理解方式将田地上的信息展现。</div> -->
                     </div>
                 </div>
             </div>
         </div>
 
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-        <script src="js/swiper.min.js"></script>
-        <script src="js/leaflet/leaflet.js"></script>
-        <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=oMvdENGYZmsGBZlo8MFffrQb"></script>
+        <!--左侧菜单栏-->
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default" id="coll-1">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                            预处理
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        图像格式转化
+                    </div>
+                    <div class="panel-body">
+                        光谱校准
+                    </div>
+                    <div class="panel-body">
+                        几何校准
+                    </div>
+                    <div class="panel-body">
+                        渐晕校准
+                    </div>
+                    <div class="panel-body">
+                        辐射一致性校准
+                    </div>
+                    <div class="panel-body">
+                        图像拼接
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#coll-1" href="#collapse1-1">
+                                    特征提取
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapse1-1" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                空间纹理特征
+                            </div>
+                            <div class="panel-body">
+                                指数提取
+                            </div>
+                        </div>
 
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-    </body>
+                    </div>
+
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            估产
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        待定
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            株高估计
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        待定
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--右侧文件树-->
+        <div class="container">
+            <div id="file-tree">
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-md-2">
+                    <h3>项目作品</h3>
+                    <ul>
+                        <li><a href="#" target="_blank">RS1</a></li>
+                        <li><a href="#" target="_blank">RS2</a></li>
+                        <li><a href="#" target="_blank">RS3</a></li>
+                        <li><a href="#" target="_blank">RS4</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-2">
+                    <h3>Demo</h3>
+                    <ul>
+                        <li><a href="#" data-toggle="modal" data-target="#myModal">跳动的字母君</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#myModal">跳动的字母</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#myModal">跳动的字</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-2">
+                    <h3>其他</h3>
+                    <ul>
+                        <li><a href="https://github.com/Circle-Ming" target="_blank">我的Github</a></li>
+                        <li><a href="https://circle-ming.github.io/" target="_blank">我的个人主页</a></li>
+                        <li><a href="project.html" target="_blank">项目展示</a></li>
+                    </ul>
+                </div>
+
+                <!-- Add the extrafix for only the required viewport -->
+                <div class="clearfix visible-sm"></div>
+                <div class="about col-sm-12 col-md-6">
+                    <h3>关于</h3>
+                    <p>Hey！</p>
+                </div>
+            </div><!-- /.row -->
+
+            <ul class="social">
+                <li><a title="微博"><span class="icon fa fa-weibo"></span></a></li>
+                <li><a title="微信"><span class="icon fa fa-weixin"></span></a></li>
+                <li><a href="https://github.com/Circle-Ming" target="_blank" title="Github"><span
+                            class="icon fa fa-github"></span></a></li>
+                <li>
+                    <a class="fa-stack" title="知乎" target="_blank" href="http://zhihu.com/">
+                        <i class="fa  fa-stack-1x">知</i>
+                    </a>
+                </li>
+            </ul>
+
+            <p class="footer-brand"><a><img src="img/logo1.png" width="140" alt="Bootstrappin'"></a></p>
+            <p class="text-center">网站备案：</p>
+        </div><!-- /.container -->
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+                </div>
+                <div class="modal-body">
+                    小拳拳锤你胸口，(｡•ˇ‸ˇ•｡)哼！不给你看。(=ﾟωﾟ)ﾉ
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/leaflet/leaflet.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=oMvdENGYZmsGBZlo8MFffrQb"></script>
+    <script src="js/vendor/jquery-3.1.1.min.js"></script>
+    <script src="js/vendor/bootstrap-treeview.min.js"></script>
+    <script src="js/file_tree.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
 </html>
