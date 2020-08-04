@@ -63,16 +63,18 @@
     margin-right: 0px;
 }
 .threeitemdetail{
-    width: 0%;
-    height: 50px;
+    width: 100%;
+    height: 30px;
     margin: 0 auto;
-    margin-top: 75px;
+    margin-top: 70px;
 }
 .content1{
-    font-size:18px;
+    font-size:14px;
     color:#3a3a3a;
     text-align: center;
-    margin: 20px 0px 50px 0px;
+    height: 1000px;
+    /* margin: 20px 0px 50px 0px; */
+    
 }
 .content2{
     text-align: center;
