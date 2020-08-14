@@ -15,9 +15,6 @@ var fileStructure = [
                 ]
             },
             {
-                text: "Results"
-            },
-            {
                 text: "Configuration File",
                 nodes: [
                     {
@@ -25,8 +22,14 @@ var fileStructure = [
                     },
                     {
                         text: "settings.json"
+                    },
+                    {
+                        text: "CMV2K-SSM5x5-600_1000-5.5.18.6-NEW.xml"
                     }
                 ]
+            },
+            {
+                text: "Results"
             }
         ]
     }
