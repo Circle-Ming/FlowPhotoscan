@@ -7,10 +7,24 @@ var fileStructure = [
                 text: "RS images",
                 nodes: [
                     {
-                        text: "1.png"
+                        text: "05-11-1.raw",
+                        nodes:[
+                            {
+                                text: "05-11-1_new-1.raw"
+                            },
+                            {
+                                text: "05-11-1_new-1.tif"
+                            },
+                            {
+                                text: "05-11-1_new-2.raw"
+                            },
+                            {
+                                text: "05-11-1_new-2.tif"
+                            }
+                        ]
                     },
                     {
-                        text: "2.png"
+                        text: "05-11-2.raw"
                     }
                 ]
             },
@@ -29,7 +43,12 @@ var fileStructure = [
                 ]
             },
             {
-                text: "Results"
+                text: "Results",
+                nodes: [
+                    {
+                        text: "反射率曲线"
+                    }
+                ]
             }
         ]
     }
