@@ -9,15 +9,15 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/function.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/bootstrap-treeview.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="js/leaflet/leaflet.css" />
     <link rel="stylesheet" href="css/container/menu.css" />
-    <link rel="stylesheet" href="css/container/file-tree.css" />
+    <link rel="stylesheet" href="css/container/right-box.css" />
     <link rel="stylesheet" href="css/container/grid.css" />
     <link rel="stylesheet" href="css/toolbox.css">
     <link rel="stylesheet" href="css/container/canvas.css">
@@ -107,6 +107,7 @@
         </nav>
     </header>
 
+    <!-- 工具栏 -->
     <div class="toolbox">
         <a class="active" href="#"><i class="fa fa-undo" aria-hidden="true"></i></a>
         <a class="active" href="#"><i class="fa fa-repeat" aria-hidden="true"></i></a>
@@ -175,8 +176,16 @@
         </div>
 
         <!--右侧文件树-->
-        <div class="container" id="file-tree">
+        <div class="container" id="right-box">
             <div id="tree">
+            </div>
+
+            <!-- 光谱校准面板 -->
+            <div id="Spectral-calibration panel" class="w3-panel w3-green w3-display-container">
+                <span onclick="this.parentElement.style.display='none'"
+                    class="w3-button w3-red w3-display-topright">x</span>
+                <p>Click on the X to close this panel.</p>
+                <p>Click on the X to close this panel.</p>
             </div>
         </div>
     </div>

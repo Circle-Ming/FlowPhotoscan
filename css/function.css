@@ -10,7 +10,7 @@ body {
     padding-top: 50px;
 }
 
-.workspace {    
+.workspace {
     height: calc(100% - 105px);
     display: grid;
     grid-template-columns: 15% 70% 15%;
