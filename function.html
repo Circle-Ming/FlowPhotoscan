@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/container/grid.css" />
     <link rel="stylesheet" href="css/toolbox.css">
     <link rel="stylesheet" href="css/container/canvas.css">
+    <link rel="stylesheet" href="css/container/side-panel.css">
+
 
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script>
@@ -125,7 +127,7 @@
                     <label for="folder1" class="folderOne">预处理</label> <input type="checkbox" id="folder1" />
                     <ol>
                         <li class="folderTwo"><a href="#">图像格式转化</a></li>
-                        <li class="folderTwo"><a href="#">光谱校准</a></li>
+                        <li class="folderTwo"><a href="#" onclick="openSidePanel()">光谱校准</a></li>
                         <li class="folderTwo"><a href="#">几何校准</a></li>
                         <li class="folderTwo"><a href="#">渐晕校准</a></li>
                         <li class="folderTwo"><a href="#">辐射一致性校准</a></li>
@@ -155,43 +157,122 @@
             </ol>
         </div>
 
-
         <!-- 工作台画布 -->
         <div class="container" id="canvas">
-            <!-- <button class="tablink" onclick="openPage('tab1', this, 'red')">1.png</button>
-                <button class="tablink" onclick="openPage('tab2', this, 'green')" id="defaultOpen">2.png</button>
-                <button class="tablink" onclick="openPage('tab3', this, 'blue')">3.png</button> -->
-
-            <!-- 内容部分 -->
-            <!-- <div id="img1" class="tabcontent" style="background-color:green"> -->
+            <!-- 网格部分 -->
             <div id="grid"></div>
-            <!-- </div> -->
 
-            <!-- <div id="img2" class="tabcontent">
+            <div id="sidePanel" class="side-panel" style="display: none">
+                <header>
+                    <button class=" tablink" onclick="openPage('集合图像分析', this)" id="defaultOpen">集合图像分析</button>
+                    <button class="tablink" onclick="openPage('文件格式转化', this)">文件格式转化</button>
+                    <button class="tablink" onclick="openPage('拼图', this)">拼图</button>
+                    <button class="tablink" onclick="openPage('光谱校准', this)">光谱校准</button>
+                    <a href=" javascript:void(0)" id="closePanel" onclick="closeSidePanel()">&times;</a>
+                </header>
+
+                <div class="content">
+                    <div id="集合图像分析" class="tabcontent">
+                        <div style="margin: 15px;">
+                            <p>请先导入多光谱图像，RAW文件</p>
+                        </div>
+
+                        <div style="margin: 15px;">
+                            <button>选定校准文件</button>
+                            <i class="fa fa-check-circle-o" aria-hidden="true"
+                                style="font-size: 30px;margin-left: 30px;margin-top: 20px;"></i>
+                            <span style="font-size:20px">已选定</span>
+                        </div>
+
+                        <div style="margin: 15px;">
+                            <button>分拆为单图像文件</button>
+                        </div>
+
+                    </div>
+                    <div id="文件格式转化" class="tabcontent">
+                        <div>
+                            <p>请先选择需要转化为TIFF格式的RAW文件</p>
+                            <button>选择文件</button>
+                        </div>
+                        <div>
+                            <button>
+                                图像文件格式转化
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="拼图" class="tabcontent">
+                        <div>
+                            <p>请先选择需要拼接的TIFF文件</p>
+                        </div>
+                        <div>
+                            <button>选定拼接的TIFF文件
+                            </button>
+                            <i class="fa fa-check-circle-o" aria-hidden="true"
+                                style="font-size: 30px;margin-left: 30px;margin-top: 15px;"></i>
+                            <span style="font-size:20px">已选定</span>
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <span>请选择拼图所需工作流程</span>
+                            <div class="dropdown">
+                                <button class="dropbtn">工作流程选择</button>
+                                <div class="dropdown-content">
+                                    <a href="#">对齐照片</a>
+                                    <a href="#">生成网络</a>
+                                    <a href="#">Build-orthomosaic</a>
+                                    <a href="#">生成正射影图</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button>开始拼图</button>
+                        </div>
+                    </div>
+
+                    <div id="光谱校准" class="tabcontent">
+                        <div>
+                            <p>请先选择需要滤光片波段范围</p>
+                            </p>
+                        </div>
+                        <div>
+                            <button>600</button>
+                            <span><i class="fa fa-arrows-v" aria-hidden="true"></i></span>
+                            <span>nm -</span>
+                            <button>875</button>
+                            <span><i class="fa fa-arrows-v" aria-hidden="true"></i></span>
+                            <span>nm</span>
+
+                            <button>确定</button>
+                        </div>
+                        <div>
+                            <p>请选择需要使用的校正文件：</p>
+                        </div>
+                        <div>
+                            <button>选定校正文件
+                            </button>
+                        </div>
+                        <div>
+                            <button>光谱校正开始</button>
+                        </div>
+                    </div>
                 </div>
-
-                <div id="img3" class="tabcontent">
-                </div> -->
+            </div>
 
         </div>
 
         <!--右侧文件树-->
         <div class="container" id="right-box">
-            <div id="tree">
-            </div>
-
-            <!-- 光谱校准面板 -->
-            <div id="Spectral-calibration panel" class="w3-panel w3-green w3-display-container">
-                <span onclick="this.parentElement.style.display='none'"
-                    class="w3-button w3-red w3-display-topright">x</span>
-                <p>Click on the X to close this panel.</p>
-                <p>Click on the X to close this panel.</p>
-            </div>
+            <div id="tree"></div>
         </div>
     </div>
 
 
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script>
+
+
+
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')
+    </script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=oMvdENGYZmsGBZlo8MFffrQb"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
@@ -203,10 +284,11 @@
     <script src="js/container/menu.js"></script>
     <script src="js/container/canvas.js"></script>
 
-    <script>
+    <script src="js/container/panels/side-panel.js"></script>
+    <!-- <script>
         window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
         ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
-    </script>
+    </script> -->
 </body>
 
 </html>
