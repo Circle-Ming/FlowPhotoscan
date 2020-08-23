@@ -35,4 +35,4 @@ var fileStructure = [
     }
 ];
 
-$('#file-tree').treeview({data: fileStructure});
+$('#tree').treeview({ data: fileStructure });

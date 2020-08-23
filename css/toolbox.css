@@ -1,0 +1,27 @@
+.toolbox {
+    margin: 0;
+    width: 100%;
+    background-color: #ffff;
+    overflow: auto;
+    /* border:2px solid black; */
+    border-bottom: 2px black solid;
+}
+
+.toolbox a {
+    float: left;
+    text-align: center;
+    width: 5%;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: gray;
+    font-size: 20px;
+}
+
+.toolbox a:hover {
+    background-color: black;
+}
+
+.active {
+    background-color: white;
+    /* Add an active/current color */
+}

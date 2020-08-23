@@ -1,0 +1,111 @@
+/* 菜单靠左 */
+#menu {
+    border-right:2px solid black;
+    border-bottom:2px solid black;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+.menu {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    overflow: hidden;
+    width: 100%;
+}
+
+/*隐藏input*/
+.menu li input {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+    height: 1em;
+    width: 1em;
+    top: 0;
+}
+
+/*所有菜单项设置统一样式*/
+.menu li {
+    position: relative;
+    list-style: none;
+}
+
+/*一级菜单加下边线*/
+.menu>li {
+    border-bottom: 1px solid black;
+}
+
+/* .menu .folderOne {
+    
+} */
+/*给有子菜单的菜单项添加背景图标*/
+.menu li label {
+    max-width: 999px;
+    cursor: pointer;
+    display: block;
+    margin: 0 0 0 -50px;
+    padding: 15px 10px 15px 70px;
+    background: url(../../icon/arrow-left.png) no-repeat right center;
+    background-position: 95% 50%;
+    background-size: 15px 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.menu li label:hover,
+li label:focus {
+    background-color: #a7a7a7;
+    color: #fff;
+}
+
+/*清除所有展开的子菜单的display*/
+.menu li input+ol {
+    display: none;
+}
+
+/*当input被选中时，给所有展开的子菜单设置样式*/
+.menu input:checked+ol {
+    padding-left: 14px;
+    height: auto;
+    display: block;
+}
+
+.menu input:checked+ol>li {
+    height: auto;
+}
+
+/*末层菜单为A标签，设置样式*/
+.menu li a {
+    margin: 0 -10px 0 -50px;
+    padding: 15px 20px 15px 70px;
+    text-decoration: none;
+    display: block;
+    color: #000000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu li a:hover,
+li a:focus {
+    background-color: #000000;
+    color: #fff;
+}
+
+/*不同层级的菜单字体大小不同*/
+.menu .folderOne {
+    font-size: 18px;
+}
+
+.menu .folderTwo {
+    font-size: 16px;
+}
+
+.menu .folderThree {
+    font-size: 14px;
+}

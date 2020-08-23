@@ -8,16 +8,20 @@
     <link rel="shortcut icon" href="img/lab.ico">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--针对移动浏览器的视口标签-->
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/function.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/bootstrap-treeview.min.css">
     <link rel="stylesheet" href="js/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="css/container/menu.css" />
+    <link rel="stylesheet" href="css/container/file-tree.css" />
+    <link rel="stylesheet" href="css/container/grid.css" />
+    <link rel="stylesheet" href="css/toolbox.css">
+    <link rel="stylesheet" href="css/container/canvas.css">
+
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script>
         var _hmt = _hmt || [];
@@ -28,15 +32,9 @@
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
-
 </head>
 
 <body data-spy="scroll" data-target=".navbar">
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
-    <!-- Add your site or application content here -->
     <header role="banner">
         <nav role="navigation" class="navbar navbar-default navbar-fixed-top">
             <div class="container">
@@ -50,21 +48,6 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <!-- <li class="active"><a href="#index-content-banner">
-                                <span class="icon fa fa-home"></span> 主页
-                            </a></li>
-                            <li><a href="#index-content-case">
-                                <span class="icon fa fa-desktop"></span> 项目
-                            </a></li>
-                            <li><a href="#index-content-project">
-                                <span class="icon fa fa-sitemap"></span> 论文
-                            </a></li>
-                            <li><a href="#index-content-share">
-                                <span class="icon fa fa-tasks"></span> Demo
-                            </a></li>
-                            <li><a href="#index-content-contract">
-                                <span class="icon fa fa-envelope"></span> 联系方式
-                            </a></li> -->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"> File <b class="caret"></b></a>
                             <ul class="dropdown-menu">
@@ -120,252 +103,101 @@
                     </ul>
 
                 </div>
-                <!--/.nav-collapse -->
             </div>
-            <!--/.container -->
         </nav>
     </header>
 
-    <main role="main">
-        <div class="toolbox">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="threeitemdetail">
-                        <div style="text-align: center; height:0px; width:150px;">
-                            <img src="img/function/1.png" style="width:17px;">
-                        </div>
-                        <div style="text-align: right; height:0px; width:250px;">
-                            <img src="img/function/2.png" style="width:17px;">
-                        </div>
-
-                        <!-- <div class="content1">田地</div>
-                            <div class="content2">将数据呈现于田地之上，不仅仅是可视化，更是探索、挖掘、发现数据的新价值之旅，力求以易理解方式将田地上的信息展现。</div> -->
-                    </div>
-
-                </div>
-                <div class="col-md-3 col-sm-6" style="border-left:1px solid #e2e2e2; border-right:1px solid #e2e2e2;">
-                    <div class="threeitemdetail">
-                        <div style="text-align: center; height:0px; width:100px;">
-                            <img src="img/function/3.png" style="width:17px;">
-                        </div>
-                        <div class="content1" style="text-align: right; height: 0px; width: 220px;">缩放比例100%</div>
-                        <div style="text-align: right; height:0px; width:300px;">
-                            <img src="img/function/4.png" style="width:17px;">
-                        </div>
-                        <!-- <div class="content1">数据</div>
-                            <div class="content2">上传、维护或分享自己的数据，使用云平台提供的各类公共数据。</div> -->
-                    </div>
-                </div>
+    <div class="toolbox">
+        <a class="active" href="#"><i class="fa fa-undo" aria-hidden="true"></i></a>
+        <a class="active" href="#"><i class="fa fa-repeat" aria-hidden="true"></i></a>
+        <a class="active" href="#"><i class="fa fa-search-minus" aria-hidden="true"></i></a>
+        <a class="active" href="#"><i class="fa fa-search-plus" aria-hidden="true"></i></a>
+        <a class="active" href="#"><i class="fa fa-cloud-download" aria-hidden="true"></i></a>
+    </div>
 
 
-                <div class="col-md-3 col-sm-6" style="border-right:1px ssolid #e2e2e2;">
-                    <div class="threeitemdetail">
-                        <div style="text-align: center; height:0px; width:100px;">
-                            <img src="img/function/5.png" style="width:15px;">
-                        </div>
-                        <div style="text-align: right; height:0px; width:175px;">
-                            <img src="img/function/6.png" style="width:20px;">
-                        </div>
-                        <div style="text-align: right; height:0px; width:300px;">
-                            <img src="img/function/7.png" style="width:20px;">
-                        </div>
-                        <!-- <div class="content1">应用</div>
-                            <div class="content2">即拿即用的Web应用程序，提供实时数据处理、分析与可视化，最大化结合农业信息专家和遥感专家的意见。 -->
-
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6" style="border-left:1px solid #e2e2e2;">
-                    <div class="threeitemdetail">
-                        <div style="text-align: center; height:0px; width:350px;">
-                            <img src="img/function/8.png" style="width:20px;">
-                        </div>
-
-                        <!-- <div class="content1">田地</div>
-                            <div class="content2">将数据呈现于田地之上，不仅仅是可视化，更是探索、挖掘、发现数据的新价值之旅，力求以易理解方式将田地上的信息展现。</div> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-
+    <div class="workspace">
         <!--左侧菜单栏-->
-        <div class="panel-group" id="accordion" style="width: 200px;">
-            <div class="panel panel-default" id="coll-1">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                            预处理
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapse1" class="panel-collapse collapse in">
-                    <div class="panel-body">
-                         图像格式转化
-                    </div>
-                    <div class="panel-body">
-                         光谱校准
-                    </div>
-                    <div class="panel-body">
-                         几何校准
-                    </div>
-                    <div class="panel-body">
-                         渐晕校准
-                    </div>
-                    <div class="panel-body">
-                        辐射一致性校准
-                    </div>
-                    <div class="panel-body">
-                        图像拼接
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h5 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#coll-1" href="#collapse1-1">
-                                    特征提取
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="collapse1-1" class="panel-collapse collapse in">
-                            <div class="panel-body">
-                                空间纹理特征
-                            </div>
-                            <div class="panel-body">
-                                指数提取
-                            </div>
-                        </div>
+        <div class="container" id="menu">
+            <ol class="menu">
+                <li>
+                    <label for="folder1" class="folderOne">预处理</label> <input type="checkbox" id="folder1" />
+                    <ol>
+                        <li class="folderTwo"><a href="#">图像格式转化</a></li>
+                        <li class="folderTwo"><a href="#">光谱校准</a></li>
+                        <li class="folderTwo"><a href="#">几何校准</a></li>
+                        <li class="folderTwo"><a href="#">渐晕校准</a></li>
+                        <li class="folderTwo"><a href="#">辐射一致性校准</a></li>
+                        <li class="folderTwo"><a href="#">图像拼接</a></li>
+                        <li>
+                            <label for="subfolder1" class="folderTwo">特征提取</label> <input type="checkbox"
+                                id="subfolder1" />
+                            <ol>
+                                <li class="folderThree"><a href="#">空间纹理特征</a></li>
+                            </ol>
+                        </li>
+                    </ol>
 
-                    </div>
-
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                            估产
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapseTwo" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        待定
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                            株高估计
-                        </a>
-                    </h4>
-                </div>
-                <div id="collapseThree" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        待定
-                    </div>
-                </div>
-            </div>
+                </li>
+                <li>
+                    <label for="folder2" class="folderOne">估产</label> <input type="checkbox" id="folder2" />
+                    <ol>
+                        <li class="folderTwo"><a href="#">待定</a></li>
+                    </ol>
+                </li>
+                <li>
+                    <label for="folder3" class="folderOne">株高估计</label> <input type="checkbox" id="folder3" />
+                    <ol>
+                        <li class="folderTwo"><a href="#">待定</a></li>
+                    </ol>
+                </li>
+            </ol>
         </div>
-        <img src="img/function/9.png" style="position: absolute; left: 500px; top: 125px; width:500px;">
+
+
+        <!-- 工作台画布 -->
+        <div class="container" id="canvas">
+            <!-- <button class="tablink" onclick="openPage('tab1', this, 'red')">1.png</button>
+                <button class="tablink" onclick="openPage('tab2', this, 'green')" id="defaultOpen">2.png</button>
+                <button class="tablink" onclick="openPage('tab3', this, 'blue')">3.png</button> -->
+
+            <!-- 内容部分 -->
+            <!-- <div id="img1" class="tabcontent" style="background-color:green"> -->
+            <div id="grid"></div>
+            <!-- </div> -->
+
+            <!-- <div id="img2" class="tabcontent">
+                </div>
+
+                <div id="img3" class="tabcontent">
+                </div> -->
+
+        </div>
 
         <!--右侧文件树-->
-        <div class="container" style="position: fixed; left: 1270px; top: 150px; width: 250px;">
-            <div id="file-tree">
-            </div>
-        </div>
-
-
-
-    </main>
-
-    <footer role="contentinfo">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-4 col-md-2">
-                    <h3>项目作品</h3>
-                    <ul>
-                        <li><a href="#" target="_blank">RS1</a></li>
-                        <li><a href="#" target="_blank">RS2</a></li>
-                        <li><a href="#" target="_blank">RS3</a></li>
-                        <li><a href="#" target="_blank">RS4</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-4 col-md-2">
-                    <h3>Demo</h3>
-                    <ul>
-                        <li><a href="#" data-toggle="modal" data-target="#myModal">跳动的字母君</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#myModal">跳动的字母</a></li>
-                        <li><a href="#" data-toggle="modal" data-target="#myModal">跳动的字</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-4 col-md-2">
-                    <h3>其他</h3>
-                    <ul>
-                        <li><a href="https://github.com/Circle-Ming" target="_blank">我的Github</a></li>
-                        <li><a href="https://circle-ming.github.io/" target="_blank">我的个人主页</a></li>
-                        <li><a href="project.html" target="_blank">项目展示</a></li>
-                    </ul>
-                </div>
-
-                <!-- Add the extrafix for only the required viewport -->
-                <div class="clearfix visible-sm"></div>
-                <div class="about col-sm-12 col-md-6">
-                    <h3>关于</h3>
-                    <p>Hey！</p>
-                </div>
-            </div><!-- /.row -->
-
-            <ul class="social">
-                <li><a title="微博"><span class="icon fa fa-weibo"></span></a></li>
-                <li><a title="微信"><span class="icon fa fa-weixin"></span></a></li>
-                <li><a href="https://github.com/Circle-Ming" target="_blank" title="Github"><span
-                            class="icon fa fa-github"></span></a></li>
-                <li>
-                    <a class="fa-stack" title="知乎" target="_blank" href="http://zhihu.com/">
-                        <i class="fa  fa-stack-1x">知</i>
-                    </a>
-                </li>
-            </ul>
-
-            <p class="footer-brand"><a><img src="img/logo1.png" width="140" alt="Bootstrappin'"></a></p>
-            <p class="text-center">网站备案：</p>
-        </div><!-- /.container -->
-    </footer>
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
-                </div>
-                <div class="modal-body">
-                    小拳拳锤你胸口，(｡•ˇ‸ˇ•｡)哼！不给你看。(=ﾟωﾟ)ﾉ
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                </div>
+        <div class="container" id="file-tree">
+            <div id="tree">
             </div>
         </div>
     </div>
 
+
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')</script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=oMvdENGYZmsGBZlo8MFffrQb"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/leaflet/leaflet.js"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=oMvdENGYZmsGBZlo8MFffrQb"></script>
     <script src="js/vendor/jquery-3.1.1.min.js"></script>
     <script src="js/vendor/bootstrap-treeview.min.js"></script>
-    <script src="js/file_tree.js"></script>
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script src="js/container/file_tree.js"></script>
+    <script src="js/container/menu.js"></script>
+    <script src="js/container/canvas.js"></script>
+
     <script>
         window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
         ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
     </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 </body>
 
 </html>
