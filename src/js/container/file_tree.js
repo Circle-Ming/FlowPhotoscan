@@ -23,9 +23,9 @@ var fileStructure = [
                             }
                         ]
                     },
-                    {
-                        text: "05-11-2.raw"
-                    }
+                    // {
+                    //     text: "05-11-2.raw"
+                    // }
                 ]
             },
             {
