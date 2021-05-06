@@ -124,28 +124,63 @@
         <div class="container" id="menu">
             <ol class="menu">
                 <li>
-                    <label for="folder1" class="folderOne">预处理</label> <input type="checkbox" id="folder1" />
+                    <label for="folder1" class="folderOne">数据预处理</label> <input type="checkbox" id="folder1" />
                     <ol>
-                        <li class="folderTwo"><a href="#">图像格式转化</a></li>
-                        <li class="folderTwo"><a href="#" onclick="openSidePanel()">光谱校准</a></li>
-                        <li class="folderTwo"><a href="#">几何校准</a></li>
-                        <li class="folderTwo"><a href="#">渐晕校准</a></li>
-                        <li class="folderTwo"><a href="#">辐射一致性校准</a></li>
-                        <li class="folderTwo"><a href="#">图像拼接</a></li>
                         <li>
-                            <label for="subfolder1" class="folderTwo">特征提取</label> <input type="checkbox"
+                            <label for="subfolder1" class="folderTwo">可见光影像预处理</label> <input type="checkbox"
                                 id="subfolder1" />
                             <ol>
-                                <li class="folderThree"><a href="#">空间纹理特征</a></li>
+                                <li class="folderTwo"><a href="#">几何校准</a></li>
+                                <li class="folderTwo"><a href="#">辐射一致性校准</a></li>
+                                <li class="folderTwo"><a href="#">影像拼接</a></li>
+                                <li>
+                                    <label for="subfolder3" class="folderTwo">特征提取</label> <input type="checkbox"
+                                        id="subfolder3" />
+                                    <ol>
+                                        <li class="folderThree"><a href="#">空间纹理特征</a></li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <label for="subfolder2" class="folderTwo">高光谱影像预处理</label> <input type="checkbox"
+                                id="subfolder2" />
+                            <ol>
+                                <li class="folderTwo"><a href="#" onclick="openSidePanel()">影像数据立方体重建</a></li>
+                                <li class="folderTwo"><a href="#">几何校准</a></li>
+                                <li class="folderTwo"><a href="#">渐晕校准</a></li>
+                                <li class="folderTwo"><a href="#">辐射校准</a></li>
+                                <li class="folderTwo"><a href="#">辐射一致性校准</a></li>
+                                <li class="folderTwo"><a href="#">影像拼接</a></li>
                             </ol>
                         </li>
                     </ol>
 
                 </li>
                 <li>
-                    <label for="folder2" class="folderOne">相关模型</label> <input type="checkbox" id="folder2" />
+                    <label for="folder2" class="folderOne">应用</label> <input type="checkbox" id="folder2" />
                     <ol>
-                        <li class="folderTwo"><a href="#">植被指数</a></li>
+                        <!-- <li class="folderTwo"><a href="#">植被指数</a></li> -->
+                        <li>
+                            <label for="subfolder4" class="folderTwo">植被指数</label> <input type="checkbox"
+                                id="subfolder4" />
+                            <ol>
+                                <li class="folderThree"><a href="#">NDYI</a></li>
+                                <li class="folderThree"><a href="#">VARI</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <label for="subfolder5" class="folderTwo">产量估计</label> <input type="checkbox"
+                                id="subfolder5" />
+                            <ol>
+                                <li class="folderThree"><a href="#">基于植被指数</a></li>
+                                <li class="folderThree"><a href="#">基于稻穗分割</a></li>
+                            </ol>
+                        </li>
+                        <li class="folderThree"><a href="#">纹理特征</a></li>
+                        <li class="folderThree"><a href="#">稻穗计数</a></li>
+                        <li class="folderThree"><a href="#">株高预估</a></li>
                     </ol>
                 </li>
 
@@ -160,31 +195,27 @@
             <!-- 底部工具栏 -->
             <div id="sidePanel" class="side-panel" style="display: none">
                 <header>
-                    <button class="tablink" onclick="openPage('集合图像分析', this)" id="defaultOpen">集合图像分析</button>
+                    <button class="tablink" onclick="openPage('集合图像解压缩', this)" id="defaultOpen">集合图像解压缩</button>
+                    <button class="tablink" onclick="openPage('立方体排序', this)">立方体排序</button>
                     <button class="tablink" onclick="openPage('文件格式转化', this)">文件格式转化</button>
-                    <button class="tablink" onclick="openPage('拼图', this)">拼图</button>
-                    <button class="tablink" onclick="openPage('光谱校准', this)">光谱校准</button>
+                    <!-- <button class="tablink" onclick="openPage('拼图', this)">拼图</button> -->
                     <a href=" javascript:void(0)" id="closePanel" onclick="closeSidePanel()">&times;</a>
                 </header>
 
                 <div class="content">
-                    <div id="集合图像分析" class="tabcontent">
+                    <div id="集合图像解压缩" class="tabcontent">
                         <div>
                             <p>请先导入多光谱图像，RAW文件</p>
                         </div>
 
                         <div>
-                            <label for="select_for_calibration">选择校准文件(.raw)</label>
+                            <label for="select_for_calibration">选择图像文件(.raw)</label>
                             <input type="file" id="select_for_calibration" name="select_for_calibration" multiple>
                             <i class="fa fa-check-circle-o" id="check_icon_calibration"
                                 style="font-size: 30px;margin-left: 20px;opacity: 0;"></i>
                         </div>
-
-                        <div style=" margin-top: 30px;">
-                            <button>分拆为单图像文件</button>
-                        </div>
-
                     </div>
+
                     <div id="文件格式转化" class="tabcontent">
                         <div>
                             <p>选择需要转化为TIFF格式的RAW文件</p>
@@ -229,7 +260,7 @@
                         </div>
                     </div>
 
-                    <div id="光谱校准" class="tabcontent">
+                    <div id="立方体排序" class="tabcontent">
                         <div>
                             <p style="margin-top: 5px">请先选择需要滤光片波段范围</p>
                             </p>
@@ -255,7 +286,7 @@
                                 style="font-size: 30px;margin-left: 20px;opacity: 0;"></i>
                         </div>
                         <div style="margin-top: 10px;">
-                            <button>光谱校正开始</button>
+                            <button>立方体分割排序开始</button>
                         </div>
                     </div>
                 </div>
