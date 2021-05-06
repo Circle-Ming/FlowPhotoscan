@@ -145,7 +145,15 @@
                 <li>
                     <label for="folder2" class="folderOne">相关模型</label> <input type="checkbox" id="folder2" />
                     <ol>
-                        <li class="folderTwo"><a href="#">植被指数</a></li>
+                        <!-- <li class="folderTwo"><a href="#">植被指数</a></li> -->
+                        <li>
+                            <label for="subfolder2" class="folderTwo">植被指数计算</label> <input type="checkbox"
+                                id="subfolder2" />
+                            <ol>
+                                <li class="folderThree"><a href="#">NDYI</a></li>
+                                <li class="folderThree"><a href="#">VARI</a></li>
+                            </ol>
+                        </li>
                     </ol>
                 </li>
                 
@@ -159,7 +167,7 @@
 
             <div id="sidePanel" class="side-panel" style="display: none">
                 <header>
-                    <button class=" tablink" onclick="openPage('集合图像分析', this)" id="defaultOpen">集合图像分析</button>
+                    <button class=" tablink" onclick="openPage('集合图像分析', this)" id="defaultOpen">集合图像分拆</button>
                     <button class="tablink" onclick="openPage('文件格式转化', this)">文件格式转化</button>
                     <button class="tablink" onclick="openPage('拼图', this)">拼图</button>
                     <button class="tablink" onclick="openPage('光谱校准', this)">光谱校准</button>
