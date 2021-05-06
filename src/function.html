@@ -53,9 +53,9 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"> File <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a target="_blank">New File</a></li>
-                                <li><a target="_blank">Open File...</a></li>
-                                <li><a target="_blank">Open Folder...</a></li>
+                                <li id="New File"><a target="_blank">New File</a></li>
+                                <li id="Open File"><a target="_blank">Open File...</a></li>
+                                <li id="Open Folder"><a target="_blank">Open Folder...</a></li>
                                 <li><a target="_blank">Save</a></li>
                                 <li><a target="_blank">Save As...</a></li>
                                 <li><a href="index.html" target="_blank">Exit</a></li>
@@ -148,7 +148,7 @@
                         <li class="folderTwo"><a href="#">植被指数</a></li>
                     </ol>
                 </li>
-                
+
             </ol>
         </div>
 
@@ -157,9 +157,10 @@
             <!-- 网格部分 -->
             <div id="grid"></div>
 
+            <!-- 底部工具栏 -->
             <div id="sidePanel" class="side-panel" style="display: none">
                 <header>
-                    <button class=" tablink" onclick="openPage('集合图像分析', this)" id="defaultOpen">集合图像分析</button>
+                    <button class="tablink" onclick="openPage('集合图像分析', this)" id="defaultOpen">集合图像分析</button>
                     <button class="tablink" onclick="openPage('文件格式转化', this)">文件格式转化</button>
                     <button class="tablink" onclick="openPage('拼图', this)">拼图</button>
                     <button class="tablink" onclick="openPage('光谱校准', this)">光谱校准</button>
@@ -173,26 +174,31 @@
                         </div>
 
                         <div>
-                            <button>选定校准文件</button>
-                            <i class="fa fa-check-circle-o" aria-hidden="true"
-                                style="font-size: 25px;margin-left: 30px;margin-top: 10px;"></i>
-                            <span style="font-size:15px">已选定</span>
+                            <label for="select_for_calibration">选择校准文件(.raw)</label>
+                            <input type="file" id="select_for_calibration" name="select_for_calibration" multiple>
+                            <i class="fa fa-check-circle-o" id="check_icon_calibration"
+                                style="font-size: 30px;margin-left: 20px;opacity: 0;"></i>
                         </div>
 
-                        <div style="margin-top: 30px;">
+                        <div style=" margin-top: 30px;">
                             <button>分拆为单图像文件</button>
                         </div>
 
                     </div>
                     <div id="文件格式转化" class="tabcontent">
                         <div>
-                            <p>请先选择需要转化为TIFF格式的RAW文件</p>
-                            <button>选择文件</button>
+                            <p>选择需要转化为TIFF格式的RAW文件</p>
                         </div>
-                        <div style="margin-top: 30px;">
-                            <button>
-                                图像文件格式转化
-                            </button>
+
+                        <div>
+                            <label for="select_for_format_transfer">选择.raw文件</label>
+                            <input type="file" id="select_for_format_transfer" name="select_for_format_transfer"
+                                multiple>
+                            <i class="fa fa-check-circle-o" id="check_icon_transfer"
+                                style="font-size: 30px;margin-left: 20px;opacity: 0;"></i>
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <button>图像文件格式转化</button>
                         </div>
                     </div>
 
@@ -201,11 +207,10 @@
                             <p>请先选择需要拼接的TIFF文件</p>
                         </div>
                         <div>
-                            <button>选定拼接的TIFF文件
-                            </button>
-                            <i class="fa fa-check-circle-o" aria-hidden="true"
-                                style="font-size: 25px;margin-left: 30px;margin-top: 15px;"></i>
-                            <span style="font-size:15px">已选定</span>
+                            <label for="select_for_joint">选择拼接的.tiff文件</label>
+                            <input type="file" id="select_for_joint" name="select_for_joint" multiple>
+                            <i class="fa fa-check-circle-o" id="check_icon_joint"
+                                style="font-size: 30px;margin-left: 20px;opacity: 0;"></i>
                         </div>
                         <div style="margin-top: 12px;">
                             <span>请选择拼图所需工作流程</span>
@@ -229,22 +234,25 @@
                             <p style="margin-top: 5px">请先选择需要滤光片波段范围</p>
                             </p>
                         </div>
-                        <div>
-                            <button >600</button>
-                            <span><i class="fa fa-arrows-v" aria-hidden="true"></i></span>
-                            <span>nm  -</span>
-                            <button>875</button>
-                            <span><i class="fa fa-arrows-v" aria-hidden="true"></i></span>
-                            <span>nm</span>
 
-                            <button>确定</button>
+                        <div style="padding-left: 30px;">
+                            <input type="text" id="wavelen_box1" class="wavelen_box" value="600" required minlength="1"
+                                maxlength="5" size="5" onkeyup="this.value=this.value.replace(/\D/g,'')">
+                            <span> nm ~ </span>
+                            <input type="text" id="wavelen_box2" class="wavelen_box" value="800" required minlength="1"
+                                maxlength="5" size="5" onkeyup="this.value=this.value.replace(/\D/g,'')">
+                            <span> nm </span>
+                            <button id="wavelen_confirm">确定</button>
                         </div>
+
                         <div>
                             <p style="margin-top: 15px">请选择需要使用的校正文件：</p>
                         </div>
-                        <div style="margin-top: 10px;">
-                            <button>选定校正文件
-                            </button>
+                        <div>
+                            <label for="select_for_calibration2">选择校正文件</label>
+                            <input type="file" id="select_for_calibration2" name="select_for_calibration2" multiple>
+                            <i class="fa fa-check-circle-o" id="check_icon_calibration2"
+                                style="font-size: 30px;margin-left: 20px;opacity: 0;"></i>
                         </div>
                         <div style="margin-top: 10px;">
                             <button>光谱校正开始</button>
@@ -262,13 +270,10 @@
     </div>
 
 
-
-
-
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-3.1.1.min.js"><\/script>')
     </script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=oMvdENGYZmsGBZlo8MFffrQb"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=oMvdENGYZmsGBZlo8MFffrQb"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/swiper.min.js"></script>
@@ -278,12 +283,7 @@
     <script src="js/container/file_tree.js"></script>
     <script src="js/container/menu.js"></script>
     <script src="js/container/canvas.js"></script>
-
     <script src="js/container/panels/side-panel.js"></script>
-    <!-- <script>
-        window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-        ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
-    </script> -->
 </body>
 
 </html>

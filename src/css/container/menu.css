@@ -38,9 +38,6 @@
     border-bottom: 1px solid black;
 }
 
-/* .menu .folderOne {
-    
-} */
 /*给有子菜单的菜单项添加背景图标*/
 .menu li label {
     max-width: 999px;
