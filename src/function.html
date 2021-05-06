@@ -124,9 +124,45 @@
         <div class="container" id="menu">
             <ol class="menu">
                 <li>
-                    <label for="folder1" class="folderOne">预处理</label> <input type="checkbox" id="folder1" />
+                    <label for="folder1" class="folderOne">数据预处理</label> <input type="checkbox" id="folder1" />
                     <ol>
-                        <li class="folderTwo"><a href="#">图像格式转化</a></li>
+                        <li>
+                            <label for="subfolder1" class="folderTwo">可见光影像预处理</label> <input type="checkbox"
+                                id="subfolder1" />
+                            <ol>
+                                <li class="folderTwo"><a href="#">几何校准</a></li>
+                                <li class="folderTwo"><a href="#">辐射一致性校准</a></li>
+                                <li class="folderTwo"><a href="#">图像拼接</a></li>
+                                <li>
+                                    <label for="subfolder3" class="folderTwo">特征提取</label> <input type="checkbox"
+                                        id="subfolder3" />
+                                    <ol>
+                                        <li class="folderThree"><a href="#">空间纹理特征</a></li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <li>
+                            <label for="subfolder2" class="folderTwo">高光谱影像预处理</label> <input type="checkbox"
+                                id="subfolder2" />
+                            <ol>
+                                <li class="folderTwo"><a href="#">图像拼接</a></li>
+                                <li class="folderTwo"><a href="#" onclick="openSidePanel()">光谱校准</a></li>
+                                <li class="folderTwo"><a href="#">几何校准</a></li>
+                                <li class="folderTwo"><a href="#">渐晕校准</a></li>
+                                <li class="folderTwo"><a href="#">辐射一致性校准</a></li>
+                                <li>
+                                    <label for="subfolder3" class="folderTwo">特征提取</label> <input type="checkbox"
+                                        id="subfolder3" />
+                                    <ol>
+                                        <li class="folderThree"><a href="#">空间纹理特征</a></li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+
+                        <!-- <li class="folderTwo"><a href="#">图像格式转化</a></li>
                         <li class="folderTwo"><a href="#" onclick="openSidePanel()">光谱校准</a></li>
                         <li class="folderTwo"><a href="#">几何校准</a></li>
                         <li class="folderTwo"><a href="#">渐晕校准</a></li>
@@ -138,7 +174,7 @@
                             <ol>
                                 <li class="folderThree"><a href="#">空间纹理特征</a></li>
                             </ol>
-                        </li>
+                        </li> -->
                     </ol>
 
                 </li>
@@ -147,11 +183,19 @@
                     <ol>
                         <!-- <li class="folderTwo"><a href="#">植被指数</a></li> -->
                         <li>
-                            <label for="subfolder2" class="folderTwo">植被指数计算</label> <input type="checkbox"
-                                id="subfolder2" />
+                            <label for="subfolder4" class="folderTwo">植被指数计算</label> <input type="checkbox"
+                                id="subfolder4" />
                             <ol>
                                 <li class="folderThree"><a href="#">NDYI</a></li>
                                 <li class="folderThree"><a href="#">VARI</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <label for="subfolder5" class="folderTwo">产量估计</label> <input type="checkbox"
+                                id="subfolder5" />
+                            <ol>
+                                <li class="folderThree"><a href="#">基于植被指数</a></li>
+                                <li class="folderThree"><a href="#">基于稻穗分割</a></li>
                             </ol>
                         </li>
                     </ol>
