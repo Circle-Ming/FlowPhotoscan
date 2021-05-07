@@ -1,0 +1,40 @@
+svg {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin-left: 20px;
+}
+
+#circle {
+    stroke-dasharray: 106.8;
+    stroke-dashoffset: 106.8;
+    animation: circle 15s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+
+#tick {
+    stroke-dasharray: 35;
+    stroke-dashoffset: 35;
+    animation: tick 1.5s ease-out;
+    animation-delay: 12s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+
+@keyframes circle {
+    from {
+        stroke-dashoffset: 106.8;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes tick {
+    from {
+        stroke-dashoffset: 35;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}

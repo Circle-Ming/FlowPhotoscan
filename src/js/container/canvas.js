@@ -15,20 +15,18 @@ function openPage(pageName, elmnt, color) {
 document.getElementById("defaultOpen").click();
 
 // 文件选定icon显示
-document.getElementById('select_for_format_transfer').addEventListener('change', show_select_transfer);
 document.getElementById('select_for_calibration').addEventListener('change', show_select_calibration);
 document.getElementById('select_for_joint').addEventListener('change', show_select_joint);
 document.getElementById('select_for_calibration2').addEventListener('change', show_select_calibration2);
 
 
 function show_select_calibration() {
-  let icon = document.querySelector('#check_icon_calibration');
-  icon.style.opacity = 1;
+  let c = document.getElementById('circle');
+  let t = document.getElementById('tick')
+  c.style.animationPlayState = "running";
+  t.style.animationPlayState = "running";
 }
-function show_select_transfer() {
-  let icon = document.querySelector('#check_icon_transfer');
-  icon.style.opacity = 1;
-}
+
 function show_select_joint() {
   let icon = document.querySelector('#check_icon_joint');
   icon.style.opacity = 1;
@@ -50,4 +48,11 @@ function wavelen_confirm() {
 function wavelen_recover() {
   let btn = document.getElementById('wavelen_confirm');
   btn.innerText = "确定";
+}
+
+document.getElementById('btnFileFormatTransform').addEventListener('click', file_format_transfer);
+
+function file_format_transfer() {
+  this.innerText = "正在转化中...";
+  setTimeout(() => { this.innerText = "转化已完成!"; }, 3000);
 }
