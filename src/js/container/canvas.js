@@ -21,8 +21,10 @@ document.getElementById('select_for_calibration2').addEventListener('change', sh
 
 
 function show_select_calibration() {
+  let svg = document.getElementById('check_icon_calibration');
   let c = document.getElementById('circle');
   let t = document.getElementById('tick')
+  svg.style.opacity = 1;
   c.style.animationPlayState = "running";
   t.style.animationPlayState = "running";
 }
