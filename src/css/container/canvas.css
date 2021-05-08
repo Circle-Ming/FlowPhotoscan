@@ -1,10 +1,10 @@
 #canvas {
     padding: 0;
     width: 100%;
-    border-bottom:2px solid black;
+    border-bottom: 2px solid black;
 }
+
 .tablink {
-    background-color: white;
     color: black;
     float: left;
     cursor: pointer;
@@ -14,5 +14,15 @@
 }
 
 .tablink:hover {
-    background-color: #777;
+    background-color: rgb(160, 160, 160);
+}
+
+/* 图片自己调吧 */
+
+.img-show {
+    opacity: 0;
+    margin: 5% 20%;
+    position: absolute;
+    height: 50%;
+    width: 20%;
 }

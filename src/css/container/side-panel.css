@@ -1,24 +1,51 @@
 .side-panel {
-    width: 100%;
+    width: 70%;
     height: 350px;
-    position: relative;
-    top: -55%;
+    position:absolute;
+    bottom:0px;
     background-color: white;
-    border-top: 2px solid black;
-
+    border-top: 1px solid black;
     display: grid;
     grid-template-rows: 12% 88%;
 }
 
-.content button {
+
+.tabcontent button,label{
     margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 20px;
     font-size: 15px;
+    font-weight: normal;;
     padding: 10px 15px;
     border: 1px solid gray;
-    border-radius: 3px;
+    border-radius: 5px;
     background-color: white;
 }
+
+.tabcontent label:hover,
+.tabcontent button:hover {
+    background-color: black;
+    color: white;
+}
+
+.tabcontent input {
+    display: none;
+}
+
+.tabcontent .wavelen_box {
+    height: 40px;
+    display: inline-block;
+    outline-style: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+#wavelen_confirm {
+    width: 80px;
+}
+
 
 #closePanel {
     display: inline-block;
@@ -43,7 +70,8 @@
 }
 
 .tablink:hover {
-    background-color: rgb(128, 128, 128);
+    background-color: black;
+    color: white;
 }
 
 .tabcontent {
@@ -108,5 +136,5 @@
 }
 
 .dropdown:hover .dropbtn {
-    background-color: gray;
+    background-color: black;
 }

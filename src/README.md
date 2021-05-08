@@ -12,6 +12,3 @@
 * jQuery
 
 * Bootstrap
-
-
-## 环境搭建
