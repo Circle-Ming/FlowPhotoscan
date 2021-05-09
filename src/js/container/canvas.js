@@ -1,44 +1,28 @@
-function openPage(pageName, elmnt, color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "black";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-document.getElementById("defaultOpen").click();
-
 // 文件选定icon显示
 document.getElementById('select_for_calibration').addEventListener('change', show_select_calibration);
-document.getElementById('select_for_joint').addEventListener('change', show_select_joint);
 document.getElementById('select_for_calibration2').addEventListener('change', show_select_calibration2);
 
 
 function show_select_calibration() {
   let svg = document.getElementById('check_icon_calibration');
-  let c = document.getElementById('circle');
-  let t = document.getElementById('tick')
+  let c = document.getElementById('circle1');
+  let t = document.getElementById('tick1')
   svg.style.opacity = 1;
   c.style.animationPlayState = "running";
   t.style.animationPlayState = "running";
 }
 
-function show_select_joint() {
-  let icon = document.querySelector('#check_icon_joint');
-  icon.style.opacity = 1;
-}
 function show_select_calibration2() {
-  let icon = document.querySelector('#check_icon_calibration2');
-  icon.style.opacity = 1;
+  console.log('fuck');
+  let svg = document.getElementById('check_icon_calibration2');
+  let c = document.getElementById('circle2');
+  let t = document.getElementById('tick2')
+  svg.style.opacity = 1;
+  c.style.animationPlayState = "running";
+  t.style.animationPlayState = "running";
 }
 
-
+// 波长选择
 document.getElementById('wavelen_confirm').addEventListener('click', wavelen_confirm);
 document.getElementById('wavelen_box1').addEventListener('keyup', wavelen_recover);
 document.getElementById('wavelen_box2').addEventListener('keyup', wavelen_recover);
@@ -52,13 +36,7 @@ function wavelen_recover() {
   btn.innerText = "确定";
 }
 
-document.getElementById('btnFileFormatTransform').addEventListener('click', file_format_transfer);
-
-function file_format_transfer() {
-  this.innerText = "正在转化中...";
-  setTimeout(() => { this.innerText = "转化已完成!"; }, 3000);
-}
-
+// 进度条
 document.getElementById('btnProgressBar').addEventListener('click', progress_move);
 
 function progress_move() {
@@ -80,4 +58,21 @@ function progress_move() {
   }
 }
 
-document.getElementById('btnImageShow').addEventListener('click', () => { document.getElementById('imgShow').style.opacity = 1; })
+// 格式选择
+document.getElementById('ENVI').addEventListener('click', function () {
+  this.style.backgroundColor = "black";
+  this.style.color = "white";
+
+  let tiff = document.getElementById('TIFF');
+  tiff.style.backgroundColor = "white";
+  tiff.style.color = "black";
+});
+
+document.getElementById('TIFF').addEventListener('click', function () {
+  this.style.backgroundColor = "black";
+  this.style.color = "white";
+
+  let tiff = document.getElementById('ENVI');
+  tiff.style.backgroundColor = "white";
+  tiff.style.color = "black";
+});

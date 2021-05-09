@@ -15,11 +15,12 @@ function openPage(pageName, elmnt) {
     }
     tablinks = document.getElementsByClassName("tablink");
     for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-        tablinks[i].style.textDecoration = "";
+        tablinks[i].style.backgroundColor = "white";
+        tablinks[i].style.color = "black"
     }
     document.getElementById(pageName).style.display = "block";
-    elmnt.style.textDecoration = "underline";
+    elmnt.style.backgroundColor = "black";
+    elmnt.style.color = "white"
 }
 
 document.getElementById("defaultOpen").click();

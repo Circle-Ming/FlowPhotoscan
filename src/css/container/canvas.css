@@ -17,12 +17,10 @@
     background-color: rgb(160, 160, 160);
 }
 
-/* 图片自己调吧 */
-
 .img-show {
-    opacity: 0;
-    margin: 5% 20%;
+    display: none;
     position: absolute;
-    height: 50%;
-    width: 20%;
+    top: 60px;
+    left: 520px;
+    margin: 10%;
 }
