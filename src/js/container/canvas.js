@@ -40,20 +40,37 @@ function wavelen_recover() {
 document.getElementById('btnProgressBar').addEventListener('click', progress_move);
 
 function progress_move() {
+  // 显示进度条
   document.getElementById('progress').style.opacity = 1;
-  let time = 25; // 25s
-  let inteval = 100; // 更新间隔0.1s
   let elem = document.getElementById('progressBar');
+  let time = 25; // 25s
   let width = 0;
+  let imgs = document.getElementsByClassName('img-show');
+  let imgs_num = imgs.length;
+  // 图片加载时间
+  let img_intevals = [1000, 900, 1100, 1200, 1300, 800, 700, 650, 1350, 1200, 800, 1150, 850, 800, 1200,
+    1700, 300, 400, 1600, 1100, 900, 100, 200, 1900, 1800];
+
+  let i = 0, cur_img_intevals = 0;
+  let inteval = 100; // 进度条刷新间隔
   let id = setInterval(frame, inteval);
   function frame() {
     if (width >= 100) {
       clearInterval(id);
       document.getElementById("progressNumber").innerHTML = "分割排序完成";
     } else {
+      // 进度条样式
       width += inteval / (10 * time);//步长
       elem.style.width = width + '%';
       document.getElementById("progressNumber").innerHTML = width.toFixed(2) * 1 + '%';
+
+      // 图片显示
+      cur_img_intevals += inteval;
+      if (img_intevals[i] === cur_img_intevals) {
+        imgs[i].style.opacity = 1;
+        cur_img_intevals = 0;
+        ++i;
+      }
     }
   }
 }
