@@ -52,7 +52,7 @@ function progress_move() {
     1700, 300, 400, 1600, 1100, 900, 100, 200, 1900, 1800];
 
   let i = 0, cur_img_intevals = 0;
-  let inteval = 100; // 进度条刷新间隔
+  let inteval = 50; // 进度条刷新间隔
   let id = setInterval(frame, inteval);
   function frame() {
     if (width >= 100) {
