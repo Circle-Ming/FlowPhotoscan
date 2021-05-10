@@ -20,7 +20,7 @@
 .img-show {
     opacity: 0;
     position: absolute;
-    top: 60px;
-    left: 520px;
+    top: 10px;
+    left: 400px;
     margin: 10%;
 }
