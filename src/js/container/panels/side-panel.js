@@ -1,10 +1,19 @@
-function openSidePanel() {
-    document.getElementById("sidePanel").style.display = "";
+function open_spectral() {
+    document.getElementById("spectral").style.display = "";
 }
 
-function closeSidePanel() {
-    document.getElementById("sidePanel").style.display = "none";
+function open_rice() {
+    document.getElementById("ricePanel").style.display = "";
 }
+
+function close_spectral() {
+    document.getElementById("spectral").style.display = "none";
+}
+
+function close_rice() {
+    document.getElementById("ricePanel").style.display = "none";
+}
+
 
 function openPage(pageName, elmnt) {
     // elmnt.style.cssText = "text-decoreation:underline";
@@ -23,4 +32,5 @@ function openPage(pageName, elmnt) {
     elmnt.style.color = "white"
 }
 
-document.getElementById("defaultOpen").click();
+document.getElementById("defaultSpectral").click();
+document.getElementById("defaultRice").click();

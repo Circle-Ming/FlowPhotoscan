@@ -1,93 +1,96 @@
 .side-panel {
-    width: 70%;
-    height: 350px;
-    position: absolute;
-    bottom: 0px;
-    background-color: white;
-    border-top: 1px solid black;
-    display: grid;
-    grid-template-rows: 12% 88%;
+  width: 70%;
+  height: 350px;
+  position: absolute;
+  bottom: 0px;
+  background-color: white;
+  border-top: 1px solid black;
+  display: grid;
+  grid-template-rows: 12% 88%;
 }
 
-.tabcontent button, label {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    font-size: 15px;
-    font-weight: normal;
-    ;
-    padding: 10px 15px;
-    border: 1px solid gray;
-    border-radius: 5px;
-    background-color: white;
+.tabcontent button,
+label {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  font-size: 15px;
+  font-weight: normal;
+  padding: 10px 15px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: white;
 }
 
-.tabcontent label:hover, .tabcontent button:hover {
-    background-color: black;
-    color: white;
+.tabcontent label:hover,
+.tabcontent button:hover {
+  background-color: black;
+  color: white;
 }
 
 .tabcontent input {
-    display: none;
+  display: none;
 }
 
 .tabcontent .wavelen_box {
-    height: 40px;
-    display: inline-block;
-    outline-style: none;
-    border: 1px solid black;
-    border-radius: 5px;
-    text-align: center;
-    margin: 10px 0px;
+  height: 40px;
+  display: inline-block;
+  outline-style: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px 0px;
 }
 
 #wavelen_confirm {
-    width: 80px;
+  width: 80px;
 }
 
-#closePanel {
-    display: inline-block;
-    padding: 7px;
-    position: absolute;
-    top: -2%;
-    right: 0;
-    font-size: 25px;
+.closePanel {
+  display: inline-block;
+  padding: 7px;
+  position: absolute;
+  top: -2%;
+  right: 0;
+  font-size: 25px;
 }
 
 .tablink {
-    background-color: white;
-    color: black;
-    float: left;
-    outline: none;
-    padding: 14px 20px;
-    border: none;
-    font-family: "微软雅黑";
-    font-weight: bold;
-    font-size: 15px;
-    width: auto;
+  background-color: white;
+  color: black;
+  float: left;
+  outline: none;
+  padding: 14px 20px;
+  border: none;
+  font-family: "微软雅黑";
+  font-weight: bold;
+  font-size: 15px;
+  width: auto;
 }
 
 .tablink:hover {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 .tabcontent {
-    margin: 0;
-    padding: 0;
-    position: relative;
-    top: 12px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 12px;
 }
 
-.content span, .content p {
-    font-size: 18px;
-    position: relative;
-    margin-top: 15px;
-    margin-left: 20px;
-    text-align: start;
+.content span,
+.content p {
+  font-size: 18px;
+  position: relative;
+  margin-top: 15px;
+  margin-left: 20px;
+  text-align: start;
 }
 
-#TIFF:hover, #ENVI:hover {
-    background-color: black;
-    color: white;
+#TIFF:hover,
+#ENVI:hover {
+  background-color: black;
+  color: white;
 }

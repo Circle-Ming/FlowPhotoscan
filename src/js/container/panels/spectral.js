@@ -13,7 +13,6 @@ function show_select_calibration() {
 }
 
 function show_select_calibration2() {
-  console.log('fuck');
   let svg = document.getElementById('check_icon_calibration2');
   let c = document.getElementById('circle2');
   let t = document.getElementById('tick2')
