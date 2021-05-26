@@ -1,18 +1,16 @@
-html {
-    height: 100%;
-}
 body {
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
-
 
 .toolbox {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
 .workspace {
-    height: calc(100% - 105px);
-    display: grid;
-    grid-template-columns: 15% 70% 15%;
-    grid-column-gap: 0;
+  height: calc(100% - 105px);
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-column-gap: 0;
 }

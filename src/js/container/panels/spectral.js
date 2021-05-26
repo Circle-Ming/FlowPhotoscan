@@ -13,7 +13,6 @@ function show_select_calibration() {
 }
 
 function show_select_calibration2() {
-  console.log('fuck');
   let svg = document.getElementById('check_icon_calibration2');
   let c = document.getElementById('circle2');
   let t = document.getElementById('tick2')
@@ -43,7 +42,7 @@ function progress_move() {
   // 显示进度条
   document.getElementById('progress').style.opacity = 1;
   let elem = document.getElementById('progressBar');
-  let time = 25; // 25s
+  let time = 34; // 25s
   let width = 0;
   let imgs = document.getElementsByClassName('img-show');
   let imgs_num = imgs.length;
@@ -66,7 +65,7 @@ function progress_move() {
 
       // 图片显示
       cur_img_intevals += inteval;
-      if (img_intevals[i] === cur_img_intevals) {
+      if (100 === cur_img_intevals) {
         imgs[i].style.opacity = 1;
         cur_img_intevals = 0;
         ++i;

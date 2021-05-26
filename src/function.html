@@ -147,7 +147,7 @@
                             <label for="subfolder2" class="folderTwo">高光谱影像预处理</label> <input type="checkbox"
                                 id="subfolder2" />
                             <ol>
-                                <li class="folderTwo"><a href="#" onclick="openSidePanel()">影像数据立方体重建</a></li>
+                                <li class="folderTwo"><a href="#" onclick="open_spectral()">影像数据立方体重建</a></li>
                                 <li class="folderTwo"><a href="#">几何校准</a></li>
                                 <li class="folderTwo"><a href="#">渐晕校准</a></li>
                                 <li class="folderTwo"><a href="#">辐射校准</a></li>
@@ -175,7 +175,7 @@
                                 id="subfolder5" />
                             <ol>
                                 <li class="folderThree"><a href="#">基于植被指数</a></li>
-                                <li class="folderThree"><a href="#">基于稻穗分割</a></li>
+                                <li class="folderThree"><a href="#" onclick="open_rice()">基于稻穗分割</a></li>
                             </ol>
                         </li>
                         <li class="folderThree"><a href="#">纹理特征</a></li>
@@ -208,7 +208,7 @@
                 <img src=../rgb/MS_0929-1_16-345.jpg class="img-show">
                 <img src=../rgb/MS_0929-1_17-345.jpg class="img-show">
                 <img src=../rgb/MS_0929-1_18-345.jpg class="img-show">
-                <img src=../rgb/MS_0929-1_19-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_19-345.jpg class="img-show">                
                 <img src=../rgb/MS_0929-1_20-345.jpg class="img-show">
                 <img src=../rgb/MS_0929-1_21-345.jpg class="img-show">
                 <img src=../rgb/MS_0929-1_22-345.jpg class="img-show">
@@ -240,6 +240,302 @@
                 <img src=../rgb/MS_0929-1_48-345.jpg class="img-show">
                 <img src=../rgb/MS_0929-1_49-345.jpg class="img-show">
                 <img src=../rgb/MS_0929-1_50-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_51-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_52-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_53-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_54-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_55-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_56-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_57-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_58-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_59-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_60-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_61-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_62-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_63-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_64-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_65-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_66-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_67-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_68-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_69-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_70-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_71-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_72-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_73-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_74-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_75-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_76-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_77-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_78-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_79-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_80-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_81-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_82-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_84-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_85-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_86-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_87-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_88-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_89-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_91-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_92-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_93-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_94-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_95-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_96-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_97-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_98-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_99-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_100-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_101-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_102-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_103-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_104-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_105-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_106-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_107-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_108-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_109-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_110-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_111-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_112-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_113-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_114-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_115-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_116-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_117-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_118-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_119-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_120-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_121-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_122-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_123-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_124-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_125-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_126-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_127-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_128-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_129-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_130-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_131-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_132-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_133-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_134-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_135-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_136-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_137-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_138-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_139-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_140-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_141-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_142-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_143-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_144-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_145-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_146-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_147-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_148-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_149-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_150-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_151-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_152-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_153-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_154-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_155-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_156-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_157-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_158-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_159-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_160-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_161-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_162-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_163-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_164-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_165-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_166-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_167-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_168-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_169-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_170-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_171-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_172-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_173-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_174-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_175-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_176-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_177-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_178-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_179-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_180-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_181-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_182-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_183-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_184-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_185-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_186-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_187-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_188-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_189-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_190-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_191-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_192-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_193-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_194-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_195-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_196-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_197-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_198-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_199-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_200-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_201-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_202-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_203-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_204-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_205-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_206-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_207-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_208-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_209-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_210-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_211-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_212-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_213-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_214-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_215-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_216-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_217-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_218-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_219-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_220-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_221-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_222-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_223-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_224-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_225-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_226-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_227-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_228-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_229-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_230-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_231-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_232-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_233-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_234-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_235-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_236-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_237-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_238-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_239-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_240-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_241-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_242-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_243-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_244-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_245-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_246-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_247-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_248-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_249-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_250-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_251-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_252-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_253-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_254-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_255-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_256-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_257-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_258-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_259-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_260-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_261-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_262-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_263-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_264-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_265-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_266-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_267-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_268-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_269-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_270-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_271-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_272-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_273-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_274-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_275-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_276-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_277-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_278-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_279-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_280-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_281-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_282-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_283-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_284-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_285-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_286-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_287-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_288-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_289-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_290-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_291-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_292-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_293-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_294-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_295-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_296-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_297-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_298-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_299-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_300-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_301-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_302-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_303-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_304-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_305-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_306-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_307-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_308-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_309-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_310-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_311-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_312-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_313-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_314-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_315-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_316-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_317-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_318-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_319-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_320-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_321-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_322-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_323-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_324-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_325-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_326-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_327-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_328-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_329-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_330-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_331-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_332-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_333-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_334-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_335-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_336-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_337-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_338-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_339-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_340-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_341-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_342-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_343-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_344-345.jpg class="img-show">
+                <img src=../rgb/MS_0929-1_345-345.jpg class="img-show">
+
+                <img src="../img_rice/2.png" id="beforeSeg" class="img-rice">
+                <img src="../img_rice/217.png" id="afterSeg" class="img-rice">
 
             </div>
 
@@ -248,12 +544,12 @@
 
 
             <!-- 底部工具栏 -->
-            <div id="sidePanel" class="side-panel" style="display: none">
-            <!-- <div id="sidePanel" class="side-panel"> -->
+            <!-- 光谱分析 -->
+            <div class="side-panel" id="spectral" style="display: none">
                 <header>
-                    <button class="tablink" onclick="openPage('图像解压缩', this)" id="defaultOpen">图像解压缩</button>
+                    <button class="tablink" onclick="openPage('图像解压缩', this)" id="defaultSpectral">图像解压缩</button>
                     <button class="tablink" onclick="openPage('立方体波段排序', this)">立方体波段排序</button>
-                    <a href=" javascript:void(0)" id="closePanel" onclick="closeSidePanel()">&times;</a>
+                    <a href=" javascript:void(0)" class="closePanel" onclick="close_spectral()">&times;</a>
                 </header>
 
                 <div class="content">
@@ -272,7 +568,6 @@
                                 <polyline id="tick1" class="tick" fill="none" stroke="black" stroke-width="4"
                                     points="12,22 18.5,28 27.5,15.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-
                         </div>
                     </div>
 
@@ -329,6 +624,47 @@
                 </div>
             </div>
 
+            <!-- 稻穗产量估计 -->
+            <div class="side-panel" id="ricePanel" style="display: none">
+                <!-- <div class="side-panel" id="ricePanel"> -->
+                <header>
+                    <button class="tablink" onclick="openPage('可见光图像导入', this)" id="defaultRice">可见光图像导入</button>
+                    <button class="tablink" onclick="openPage('产量估计', this)">产量估计</button>
+                    <a href=" javascript:void(0)" class="closePanel" onclick="close_rice()">&times;</a>
+                </header>
+
+                <div class="content">
+                    <div id="可见光图像导入" class="tabcontent">
+                        <div>
+                            <p>请先导入可见光图像(.jpg)</p>
+                        </div>
+                        <div style="display:flex">
+                            <label for="select_for_segementation">选择图像文件(.jpg)</label>
+                            <input type="file" id="select_for_segementation" name="select_for_segementation" multiple
+                                accept=".jpg">
+                            <svg height="40" width="40" id="check_icon_segementation" style="opacity: 0;">
+                                <circle fill="none" stroke="#2222" stroke-width="2.5" cx="20" cy="20" r="15" />
+                                <circle id="circle3" class="circle" fill="none" stroke="black" stroke-width="2.5"
+                                    cx="20" cy="20" r="15" transform=rotate(-90,20,20) />
+                                <polyline id="tick3" class="tick" fill="none" stroke="black" stroke-width="4"
+                                    points="12,22 18.5,28 27.5,15.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div id="产量估计" class="tabcontent">
+                        <div style="display: flex; margin-top: 30px;margin-left: 30px;">
+                            <button id="btnRiceSeg">稻穗分割</button>
+                            <p id="pSegComplete" style="opacity: 0;">分割已完成</p>
+                        </div>
+                        <div style="display: flex;margin-top: 30px;margin-left: 30px;">
+                            <button id="btnEstimate">产量估计</button>
+                            <p id="pEstimate"></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
         <!--右侧文件树-->
@@ -350,7 +686,8 @@
     <script src="js/vendor/bootstrap-treeview.min.js"></script>
     <script src="js/container/file_tree.js"></script>
     <script src="js/container/menu.js"></script>
-    <script src="js/container/canvas.js"></script>
+    <script src="js/container/panels/spectral.js"></script>
+    <script src="js/container/panels/ricePanel.js"></script>
     <script src="js/container/panels/side-panel.js"></script>
 </body>
 

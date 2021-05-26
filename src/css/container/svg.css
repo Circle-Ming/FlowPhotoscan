@@ -1,62 +1,64 @@
 svg {
-    margin-top: 12px;
-    margin-bottom: 12px;
-    margin-left: 20px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-left: 20px;
 }
 
 .circle {
-    stroke-dasharray: 106.8;
-    stroke-dashoffset: 106.8;
-    animation: circle 15s ease-in-out;
-    animation-fill-mode: forwards;
-    animation-play-state: paused;
+  stroke-dasharray: 106.8;
+  stroke-dashoffset: 106.8;
+  animation: circle 15s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
 }
 
 #circle1 {
-    animation: circle 15s ease-in-out;
-    animation-fill-mode: forwards;
-    animation-play-state: paused;
+  animation: circle 15s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
 }
 
+#circle3,
 #circle2 {
-    animation: circle .8s ease-in-out;
-    animation-fill-mode: forwards;
-    animation-play-state: paused;
+  animation: circle 0.8s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
 }
 
 .tick {
-    stroke-dasharray: 35;
-    stroke-dashoffset: 35;
+  stroke-dasharray: 35;
+  stroke-dashoffset: 35;
 }
 
 #tick1 {
-    animation: tick 1s ease-out;
-    animation-delay: 12s;
-    animation-fill-mode: forwards;
-    animation-play-state: paused;
+  animation: tick 1s ease-out;
+  animation-delay: 12s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
 }
 
+#tick3,
 #tick2 {
-    animation: tick .3s ease-out;
-    animation-delay: .6s;
-    animation-fill-mode: forwards;
-    animation-play-state: paused;
+  animation: tick 0.3s ease-out;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
 }
 
 @keyframes circle {
-    from {
-        stroke-dashoffset: 106.8;
-    }
-    to {
-        stroke-dashoffset: 0;
-    }
+  from {
+    stroke-dashoffset: 106.8;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes tick {
-    from {
-        stroke-dashoffset: 35;
-    }
-    to {
-        stroke-dashoffset: 0;
-    }
+  from {
+    stroke-dashoffset: 35;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
