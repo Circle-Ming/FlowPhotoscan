@@ -17,9 +17,8 @@
   background-color: rgb(160, 160, 160);
 }
 
-.img-rice,
 .img-show {
-  opacity: 0;
+  /* opacity: 0; */
   position: absolute;
   top: 10px;
   left: 400px;

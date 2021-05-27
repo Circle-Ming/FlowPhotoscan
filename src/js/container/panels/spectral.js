@@ -21,11 +21,13 @@ function show_select_calibration() {
     socket.send(fileName);
     socket.close();
   }
-  socket.onclose = () =>
+  socket.onclose = () => {
     console.log("连接关闭");
+    socket = null;
+  }
 }
-socket = null;
-}
+
+
 
 function show_select_calibration2() {
   let svg = document.getElementById('check_icon_calibration2');
@@ -57,37 +59,33 @@ function progress_move() {
   // 显示进度条
   document.getElementById('progress').style.opacity = 1;
   let elem = document.getElementById('progressBar');
-  let time = 34; // 25s
   let width = 0;
   let imgs = document.getElementsByClassName('img-show');
-  let imgs_num = imgs.length;
-  // 图片加载时间
-  let img_intevals = [1000, 900, 1100, 1200, 1300, 800, 700, 650, 1350, 1200, 800, 1150, 850, 800, 1200,
-    1700, 300, 400, 1600, 1100, 900, 100, 200, 1900, 1800];
 
-  let i = 0, cur_img_intevals = 0;
-  let inteval = 50; // 进度条刷新间隔
-  let id = setInterval(frame, inteval);
-  function frame() {
+  // get img-box
+  let imgBox = document.getElementById('imgBox');
+  let idx = 1;
+  for (; i <= 345; ++i) {
+    let img = document.createElement("img");
+    img.classList.add('img-show');
+    img.src = "\\UAV\\raw\\0929-1\\spatialImg\\0929-1_spatialimg_" + i + ".tiff";
+    imgBox.appendChild(img);
+
+    let id = setInterval(frame, refreshInteval);
+
     if (width >= 100) {
-      clearInterval(id);
       document.getElementById("progressNumber").innerHTML = "分割排序完成";
     } else {
       // 进度条样式
-      width += inteval / (10 * time);//步长
+      // width += inteval / (10 * time);//步长
+      width += 100 / 345;
       elem.style.width = width + '%';
       document.getElementById("progressNumber").innerHTML = width.toFixed(2) * 1 + '%';
-
-      // 图片显示
-      cur_img_intevals += inteval;
-      if (100 === cur_img_intevals) {
-        imgs[i].style.opacity = 1;
-        cur_img_intevals = 0;
-        ++i;
-      }
+      img.style.opacity = 1;
     }
   }
 }
+
 
 // 格式选择
 document.getElementById('ENVI').addEventListener('click', function () {

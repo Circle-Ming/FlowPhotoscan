@@ -7,7 +7,7 @@ svg {
 .circle {
   stroke-dasharray: 106.8;
   stroke-dashoffset: 106.8;
-  animation: circle 15s ease-in-out;
+  /* animation: circle 15s ease-in-out; */
   animation-fill-mode: forwards;
   animation-play-state: paused;
 }
