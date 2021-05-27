@@ -7,13 +7,13 @@ svg {
 .circle {
   stroke-dasharray: 106.8;
   stroke-dashoffset: 106.8;
-  /* animation: circle 15s ease-in-out; */
+  /*animation: circle 15s ease-in-out;*/
   animation-fill-mode: forwards;
   animation-play-state: paused;
 }
 
 #circle1 {
-  animation: circle 15s ease-in-out;
+  animation: circle 120s ease-in-out;
   animation-fill-mode: forwards;
   animation-play-state: paused;
 }
@@ -32,7 +32,7 @@ svg {
 
 #tick1 {
   animation: tick 1s ease-out;
-  animation-delay: 12s;
+  animation-delay: 95s;
   animation-fill-mode: forwards;
   animation-play-state: paused;
 }
