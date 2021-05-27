@@ -10,6 +10,21 @@ function show_select_calibration() {
   svg.style.opacity = 1;
   c.style.animationPlayState = "running";
   t.style.animationPlayState = "running";
+
+  console.log('done');
+  let fileName = "E:\\毕设及论文\\平台前端搭建\\功能模块\\多光谱相机图像校正\\" + this.files[0].name;
+
+  let host = "ws://127.0.0.1:9999/"
+  let socket = new WebSocket(host);
+  socket.onopen = () => {
+    console.log("连接成功");
+    socket.send(fileName);
+    socket.close();
+  }
+  socket.onclose = () =>
+    console.log("连接关闭");
+}
+socket = null;
 }
 
 function show_select_calibration2() {
